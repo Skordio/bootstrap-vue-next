@@ -236,7 +236,7 @@ interface BTableProps {
   selectHead?: boolean | string
   selectMode?: 'multi' | 'single' | 'range'
   selectionVariant?: ColorVariant
-  stickyHeader?: Booleanish
+  stickyHeader?: Booleanish | string | boolean
   busy?: Booleanish
   showEmpty?: Booleanish
   perPage?: number

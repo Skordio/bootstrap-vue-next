@@ -2,7 +2,7 @@
   <table v-if="!responsive" :class="computedClasses">
     <slot />
   </table>
-  <div v-else :class="responsiveClasses">
+  <div v-else :class="responsiveClasses" :style="stickyHeaderStyle">
     <table :class="computedClasses">
       <slot />
     </table>
@@ -28,7 +28,7 @@ interface BTableSimpleProps {
   small?: Booleanish
   tableClass?: ClassValue
   tableVariant?: ColorVariant
-  stickyHeader?: Booleanish
+  stickyHeader?: Booleanish | string | boolean
 }
 
 const props = withDefaults(defineProps<BTableSimpleProps>(), {
@@ -51,7 +51,7 @@ const darkBoolean = useBooleanish(toRef(props, 'dark'))
 const hoverBoolean = useBooleanish(toRef(props, 'hover'))
 const smallBoolean = useBooleanish(toRef(props, 'small'))
 const stripedBoolean = useBooleanish(toRef(props, 'striped'))
-const stickyHeaderBoolean = useBooleanish(toRef(props, 'stickyHeader'))
+const stickyHeaderRef = toRef(props, 'stickyHeader')
 
 const computedClasses = computed(() => [
   'table',
@@ -72,11 +72,20 @@ const computedClasses = computed(() => [
   props.tableClass,
 ])
 
+const stickyHeaderStyle = computed(() => {
+  if (typeof stickyHeaderRef.value === 'boolean' && stickyHeaderRef.value === true) {
+    return [{'max-height': '300px'}]
+  } else if (stickyHeaderRef.value !== '') {
+    return [{'max-height': `${stickyHeaderRef.value}`}]
+  }
+  return [{'max-height': '300px'}]
+})
+
 const responsiveClasses = computed(() => [
   {
     'table-responsive': props.responsive === true,
     [`table-responsive-${props.responsive}`]: typeof props.responsive === 'string',
-    'b-table-sticky-header': stickyHeaderBoolean.value,
+    'b-table-sticky-header': stickyHeaderRef.value !== false,
   },
 ])
 </script>
