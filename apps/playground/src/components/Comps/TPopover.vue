@@ -118,6 +118,17 @@
           <strong>{{ popoverInput }}</strong>
         </b-popover>
       </b-col>
+      <b-col>
+        <b-popover placement="auto">
+          <template #title>
+            Auto placement
+          </template>
+          <template #target>
+            <b-button id="popover-target-1">Hover Me</b-button>
+          </template>
+          Pop over content
+        </b-popover>
+      </b-col>
     </b-row>
     <b-row class="my-5 position-relative">
       <b-col>
@@ -185,12 +196,25 @@
           in body. {{ textValue }}
         </b-popover>
       </b-col>
+      <b-col>
+        <div style="height: 50vh; width: 400px; overflow-y: scroll; padding: 5em;">
+          <div v-for="(_, i) in Array(20)" :key="i" style="height: 100px">
+            <b-popover v-bind="vari">
+              jee
+              <template #target>
+                <b-button>hover / focus</b-button>
+              </template>
+            </b-popover>
+          </div>
+        </div>
+      </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script setup lang="ts">
 import {ref} from 'vue'
+import type { BPopoverPlacement } from 'bootstrap-vue-next/src/types';
 
 const popoverInput = ref('foo')
 const popoverRef = ref(null)
@@ -198,7 +222,16 @@ const popoverContainerRef = ref(null)
 const value = ref(true)
 
 const textValue = ref('test <b onmouseover="alert(\'XSS testing!\')">with html</b>')
-const popoverPlacemet = ref('left')
+const popoverPlacemet = ref<BPopoverPlacement>('left')
+
+const vari = ref({
+  title: 'foo',
+  container: 'body',
+  delay: {
+    show: 0,
+    hide: 0,
+  },
+})
 
 // eslint-disable-next-line no-console
 const consoleLog = (...args: unknown[]) => console.log(...args)
