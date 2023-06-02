@@ -4,12 +4,9 @@
 
 ## Overview
 
-
   <b-card>
     <b-breadcrumb :items="breadcrumbItems"></b-breadcrumb>
   </b-card>
-
-
 
 ```html
 <b-breadcrumb :items="breadcrumbItems"></b-breadcrumb>
@@ -34,12 +31,9 @@ element is automatically set if it is `undefined`.
 
 ### Breadcrumb items as array of strings
 
-
   <b-card>
     <b-breadcrumb :items="breadcrumbStringArray"></b-breadcrumb>
   </b-card>
-
-
 
 ```html
 <b-breadcrumb :items="breadcrumbStringArray"></b-breadcrumb>
@@ -57,7 +51,6 @@ You may also manually place individual `<b-breadcrumb-item>` child components in
 the `<b-breadcrumb>` component, as an alternative to using the `items` prop, for greater control
 over the content of each item:
 
-
   <b-card>
     <b-breadcrumb>
       <b-breadcrumb-item href="#home">
@@ -68,8 +61,6 @@ over the content of each item:
       <b-breadcrumb-item active>Baz</b-breadcrumb-item>
     </b-breadcrumb>
   </b-card>
-
-
 
 ```html
 <b-breadcrumb>
@@ -95,7 +86,6 @@ Remember to set the `active` prop on the last item.
 Two slots are provided to put additional content before and after the breadcrumb.
 Use slot `prepend` to put content before the breadcrumb. Use slot `append` to put content after the breadcrumb.
 
-
   <b-card>
     <b-breadcrumb>
       <b-breadcrumb-item href="#home">
@@ -109,8 +99,6 @@ Use slot `prepend` to put content before the breadcrumb. Use slot `append` to pu
     </b-breadcrumb>
   </b-card>
 
-
-
 ```html
 <b-breadcrumb>
   <b-breadcrumb-item href="#home"> Home </b-breadcrumb-item>
@@ -122,9 +110,7 @@ Use slot `prepend` to put content before the breadcrumb. Use slot `append` to pu
 </b-breadcrumb>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang="ts" setup>
   import {ref, type Ref} from 'vue';

@@ -8,7 +8,6 @@ Badges scale to match the size of the immediate parent element by using relative
 
 ### Headings
 
-
     <b-card class="mt-2">
         <h1>Example heading <b-badge>New</b-badge></h1>
         <h2 class="border-0 pb-0">Example heading <b-badge>New</b-badge></h2>
@@ -17,7 +16,6 @@ Badges scale to match the size of the immediate parent element by using relative
         <h5>Example heading <b-badge>New</b-badge></h5>
         <h6>Example heading <b-badge>New</b-badge></h6>
     </b-card>
-
 
 ```html
 <h1>Example heading <b-badge>New</b-badge></h1>
@@ -32,13 +30,11 @@ Badges scale to match the size of the immediate parent element by using relative
 
 Badges can be used as part of links or buttons to provide a counter.
 
-
     <b-card>
         <b-button variant="primary">
             Notifications <b-badge variant="light">4</b-badge>
         </b-button>
     </b-card>
-
 
 ```html
 <b-button variant="primary">Notifications <b-badge variant="light">4</b-badge></b-button>
@@ -52,7 +48,6 @@ Unless the context is clear (as with the “Notifications” example, where it i
 
 Use utilities to modify a `.badge` and position it in the corner of a link or button.
 
-
     <b-card>
         <b-button variant="primary" class="position-relative">
             Inbox
@@ -62,7 +57,6 @@ Use utilities to modify a `.badge` and position it in the corner of a link or bu
             </b-badge>
         </b-button>
     </b-card>
-
 
 ```html
 <b-button variant="primary" class="position-relative">
@@ -76,7 +70,6 @@ Use utilities to modify a `.badge` and position it in the corner of a link or bu
 
 You can also replace the `.badge` class with a few more utilities without a count for a more generic indicator.
 
-
     <b-card>
         <b-button variant="primary" class="position-relative">
             Inbox
@@ -85,7 +78,6 @@ You can also replace the `.badge` class with a few more utilities without a coun
             </b-badge>
         </b-button>
     </b-card>
-
 
 ```html
 <b-button variant="primary" class="position-relative">
@@ -100,7 +92,6 @@ You can also replace the `.badge` class with a few more utilities without a coun
 
 Add any of the following variants via the `variant` prop to change the appearance of a `<b-badge>`: `default`, `primary`, `success`, `warning`, `info`, and `danger`. If no variant is specified `default` will be used.
 
-
     <b-card>
         <b-badge variant="primary">Primary</b-badge>
         <b-badge variant="secondary">Secondary</b-badge>
@@ -111,7 +102,6 @@ Add any of the following variants via the `variant` prop to change the appearanc
         <b-badge variant="light">Light</b-badge>
         <b-badge variant="dark">Dark</b-badge>
     </b-card>
-
 
 ```html
 <b-badge variant="primary">Primary</b-badge>
@@ -132,7 +122,6 @@ Using color to add meaning only provides a visual indication, which will not be 
 
 Use the `pill` prop to make badges more rounded with a larger border-radius.
 
-
     <b-card>
         <b-badge variant="primary" pill>Primary</b-badge>
         <b-badge variant="secondary" pill>Secondary</b-badge>
@@ -143,7 +132,6 @@ Use the `pill` prop to make badges more rounded with a larger border-radius.
         <b-badge variant="light" pill>Light</b-badge>
         <b-badge variant="dark" pill>Dark</b-badge>
     </b-card>
-
 
 ```html
 <b-badge variant="primary" pill>Primary</b-badge>
@@ -160,7 +148,6 @@ Use the `pill` prop to make badges more rounded with a larger border-radius.
 
 Quickly provide actionable badges with ~~hover~~ and ~~focus~~ states by specifying either the `href` prop (links) or `to` prop (router-links):
 
-
   <b-card>
     <b-badge href="#" variant="primary">Primary</b-badge>
     <b-badge href="#" variant="secondary">Secondary</b-badge>
@@ -171,7 +158,6 @@ Quickly provide actionable badges with ~~hover~~ and ~~focus~~ states by specify
     <b-badge href="#" variant="light">Light</b-badge>
     <b-badge href="#" variant="dark">Dark</b-badge>
   </b-card>
-
 
 ```html
 <b-badge href="#" variant="primary">Primary</b-badge>
@@ -184,6 +170,4 @@ Quickly provide actionable badges with ~~hover~~ and ~~focus~~ states by specify
 <b-badge href="#" variant="dark">Dark</b-badge>
 ```
 
-
     <ComponentReference></ComponentReference>
-

@@ -53,11 +53,12 @@ You can add captions to a particular slide using the following methods: using th
 ```html
 <b-carousel controls indicators>
   <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=7" caption="First Caption" />
-  <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=8" caption-html="<h1>Second Caption</h1>" />
+  <b-carousel-slide
+    img-src="https://picsum.photos/1024/480/?image=8"
+    caption-html="<h1>Second Caption</h1>"
+  />
   <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=9">
-    <template #caption>
-      Third Caption
-    </template>
+    <template #caption> Third Caption </template>
   </b-carousel-slide>
 </b-carousel>
 ```
@@ -153,20 +154,16 @@ Current Interval Speed: {{ slideInterval }} ms
 </b-carousel>
 
 <b-button-group>
-  <b-button variant="danger" @click="slideInterval = slideInterval - 1000">
-    Minus 1000
-  </b-button>
-  <b-button variant="success" @click="slideInterval = slideInterval + 1000">
-    Plus 1000
-  </b-button>
+  <b-button variant="danger" @click="slideInterval = slideInterval - 1000"> Minus 1000 </b-button>
+  <b-button variant="success" @click="slideInterval = slideInterval + 1000"> Plus 1000 </b-button>
 </b-button-group>
 
 Current Interval Speed: {{ slideInterval }} ms
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const slideInterval = ref(5000)
+  const slideInterval = ref(5000)
 </script>
 ```
 
@@ -216,18 +213,18 @@ There can come situations where you need to manually pause/resume the state of a
 </b-button-group>
 
 <script setup lang="ts">
-import {ref} from 'vue'
-import type {BCarousel} from 'bootstrap-vue-next'
+  import {ref} from 'vue'
+  import type {BCarousel} from 'bootstrap-vue-next'
 
-const myCarousel = ref<null | InstanceType<typeof BCarousel>>(null)
-const pause = () => myCarousel.value?.pause()
-const resume = () => myCarousel.value?.resume()
+  const myCarousel = ref<null | InstanceType<typeof BCarousel>>(null)
+  const pause = () => myCarousel.value?.pause()
+  const resume = () => myCarousel.value?.resume()
 </script>
 ```
 
 ## Touch Swiping
 
-BCarousel comes with automatic support for touch swiping devices. You can disable touch swiping by using the `noTouch` prop. 
+BCarousel comes with automatic support for touch swiping devices. You can disable touch swiping by using the `noTouch` prop.
 
 <b-alert :model-value="true" variant="info">
   Due to touch swiping not being available to everyone, such as a user that is using a mouse, you will likely want to include multiple ways to transition the slides. Otherwise, transitioning can be impossible to those users.
@@ -275,9 +272,9 @@ Threshold: {{ slideThreshold }}
 Threshold: {{ threshold }}
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const threshold = ref(50)
+  const threshold = ref(50)
 </script>
 ```
 
@@ -299,9 +296,9 @@ You are not required to, but you can bind the v-model. This allows for finer con
 </b-carousel>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const slide = ref(0)
+  const slide = ref(0)
 </script>
 ```
 
@@ -309,7 +306,7 @@ const slide = ref(0)
 
 You can change the default starting slide by binding the v-model to the index of the slide you want the Carousel to start at
 
-* Starts at the last index (2)
+- Starts at the last index (2)
 
 <b-carousel v-model="secondSlide" indicators>
   <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=34" />
@@ -325,9 +322,9 @@ You can change the default starting slide by binding the v-model to the index of
 </b-carousel>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const slide = ref(2)
+  const slide = ref(2)
 </script>
 ```
 
@@ -364,12 +361,12 @@ You are also able to use the built in methods for going to the next, or previous
 </b-button-group>
 
 <script setup lang="ts">
-import {ref} from 'vue'
-import type {BCarousel} from 'bootstrap-vue-next'
+  import {ref} from 'vue'
+  import type {BCarousel} from 'bootstrap-vue-next'
 
-const myCarousel = ref<null | InstanceType<typeof BCarousel>>(null)
-const prev = () => myCarousel.value?.prev()
-const next = () => myCarousel.value?.next()
+  const myCarousel = ref<null | InstanceType<typeof BCarousel>>(null)
+  const prev = () => myCarousel.value?.prev()
+  const next = () => myCarousel.value?.next()
 </script>
 ```
 
@@ -435,9 +432,7 @@ const next = () => myCarousel.value?.next()
 
 ## Reference
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script setup lang="ts">
 import {ref} from 'vue'

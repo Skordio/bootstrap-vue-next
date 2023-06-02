@@ -75,7 +75,6 @@ If you want to customize the field property names (for example using `name` fiel
 `text`) you can easily change them by setting the `text-field`, `html-field`, `value-field`, and
 `disabled-field` props to a string that contains the property name you would like to use:
 
-
   <b-card>
     <div>
       <b-form-checkbox-group
@@ -91,7 +90,6 @@ If you want to customize the field property names (for example using `name` fiel
       </div>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -134,7 +132,6 @@ props and the `v-model` are inherited from the `<b-form-checkbox-group>`.
 
 Note: the unchecked-value prop does not affect the native `<input>`'s `value` attribute, because browsers don't include unchecked boxes in form submissions. To guarantee that one of two values is submitted in a native `<form>` submit (e.g. 'yes' or 'no'), use radio inputs instead. This is the same limitation that Vue has with native checkbox inputs.
 
-
   <b-card>
     <div>
       <b-form-checkbox
@@ -148,7 +145,6 @@ Note: the unchecked-value prop does not affect the native `<input>`'s `value` at
     </div>
     <div class="mt-2">Selected: <strong>{{ concatSelectedCars}}</strong></div>
   </b-card>
-
 
 ```html
 <div>
@@ -187,7 +183,6 @@ renders block-level (stacked) checkboxes.
 Set the prop `stacked` on `<b-form-checkbox-group>` to place each form control one over the other,
 or if using individual checkboxes not inside a `<b-form-checkbox-group>`, set the `inline` prop on
 `<b-form-checkbox>`.
-
 
   <b-card>
     <div>
@@ -235,7 +230,6 @@ or if using individual checkboxes not inside a `<b-form-checkbox-group>`, set th
       </b-form-checkbox>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -288,7 +282,6 @@ or if using individual checkboxes not inside a `<b-form-checkbox-group>`, set th
 
 Use the `size` prop to control the size of the checkbox. The default size is medium. Supported size values are `sm` (small) and `lg` (large).
 
-
     <b-card>
         <div>
             <b-form-checkbox size="sm">Small</b-form-checkbox>
@@ -296,7 +289,6 @@ Use the `size` prop to control the size of the checkbox. The default size is med
             <b-form-checkbox size="lg">Large</b-form-checkbox>
         </div>
     </b-card>
-
 
 ```html
 <div>
@@ -318,7 +310,6 @@ A single checkbox can be rendered with a button appearance by setting the prop b
 
 Change the button variant by setting the button-variant prop to one of the standard Bootstrap button variants (see `<b-button>` for supported variants). The default variant is secondary.
 
-
     <b-card>
         <div class="d-flex flex-row">
             <b-form-checkbox v-model="button1Checked" class="m-2" button>
@@ -329,7 +320,6 @@ Change the button variant by setting the button-variant prop to one of the stand
             </b-form-checkbox>
         </div>
     </b-card>
-
 
 ```html
 <b-form-checkbox v-model="button1Checked" class="m-2" button>
@@ -353,7 +343,6 @@ Render groups of checkboxes with the look of a button-group by setting the prop 
 `<b-form-checkbox-group>`. Change the button variant by setting the `button-variant` prop to one of
 the standard Bootstrap button variants (see [`<b-button>`](/docs/components/button) for supported
 variants). The default `button-variant` is `secondary`.
-
 
   <b-card>
     <div class="my-2">
@@ -386,7 +375,6 @@ variants). The default `button-variant` is `secondary`.
         buttons
       ></b-form-checkbox-group>
   </b-card>
-
 
 ```html
 <div class="my-2">
@@ -443,11 +431,9 @@ effect.
 
 A single checkbox can be rendered with a switch appearance by setting the prop switch to true
 
-
   <b-card>
     <b-form-checkbox v-model="switchChecked" switch>Switch Checkbox <strong>(Checked: {{ switchChecked }})</strong></b-form-checkbox>
   </b-card>
-
 
 ```html
 <b-form-checkbox v-model="switchChecked" switch>
@@ -465,7 +451,6 @@ A single checkbox can be rendered with a switch appearance by setting the prop s
 
 Render groups of checkboxes with the look of a switches by setting the prop `switches` on
 `<b-form-checkbox-group>`.
-
 
   <b-card>
     <div class="my-2">
@@ -486,7 +471,6 @@ Render groups of checkboxes with the look of a switches by setting the prop `swi
       stacked
     ></b-form-checkbox-group>
   </b-card>
-
 
 ```html
 <div class="my-2">
@@ -525,13 +509,11 @@ Render groups of checkboxes with the look of a switches by setting the prop `swi
 Use the `size` prop to control the size of the switch. The default size is medium. Supported size
 values are `sm` (small) and `lg` (large).
 
-
   <b-card>
     <b-form-checkbox switch size="sm">Small</b-form-checkbox>
     <b-form-checkbox switch>Default</b-form-checkbox>
     <b-form-checkbox switch size="lg">Large</b-form-checkbox>
   </b-card>
-
 
 ```html
 <div>
@@ -554,7 +536,6 @@ bootstrap-vue-next includes custom SCSS/CSS that adds support for sizing the cus
 You can have `<b-form-checkbox-group>` or `<b-form-checkbox>` render a browser native checkbox input
 by setting the `plain` prop.
 
-
   <b-card>
     <div class="my-2">
       <label>Plain inline checkboxes</label>
@@ -574,7 +555,6 @@ by setting the `plain` prop.
       stacked
     ></b-form-checkbox-group>
   </b-card>
-
 
 ```html
 <div class="my-2">
@@ -613,7 +593,6 @@ To apply one of the contextual state icons on `<b-form-checkbox>`, set the `stat
 
 ### Contextual state and validation example
 
-
   <b-card>
     <b-form-checkbox :state="false">Checkbox state false</b-form-checkbox>
     <b-form-checkbox :state="true">Checkbox state true</b-form-checkbox>
@@ -629,7 +608,6 @@ To apply one of the contextual state icons on `<b-form-checkbox>`, set the `stat
     <div v-if="!contextualState">Please select two</div>
     <div v-if="contextualState">Thank you</div>
   </b-card>
-
 
 ```html
 <b-form-checkbox :state="false">Checkbox state false</b-form-checkbox>
@@ -690,14 +668,12 @@ The indeterminate state is **visual only**. The checkbox is still either checked
 
 `<b-form-checkbox>` supports setting this visual indeterminate state via the indeterminate prop (defaults to false). Clicking the checkbox will clear its indeterminate state.
 
-
     <b-card>
         <b-form-checkbox v-model="intermChecked" :indeterminate="true">Click me to see what happens</b-form-checkbox>
         <div class="mt-2">
             Checked: <strong>{{ intermChecked }}</strong>
         </div>
     </b-card>
-
 
 ```html
 <b-form-checkbox :indeterminate="true">Click me to see what happens</b-form-checkbox>
@@ -709,9 +685,7 @@ The indeterminate state is **visual only**. The checkbox is still either checked
 </script>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang='ts' setup>
   import {ref, computed} from 'vue'

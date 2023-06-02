@@ -14,7 +14,6 @@ The animation effect of this component is dependent on the prefers-reduced-motio
 
 Click the accordions below to expand/collapse the accordion content.
 
-
     <b-card class="text-dark">
         <b-accordion>
             <b-accordion-item title="Accordion Item #1" visible>
@@ -28,7 +27,6 @@ Click the accordions below to expand/collapse the accordion content.
             </b-accordion-item>
         </b-accordion>
     </b-card>
-
 
 ```html
 <b-accordion>
@@ -63,7 +61,6 @@ Click the accordions below to expand/collapse the accordion content.
 
 Add `flush` property to remove the default background-color, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.
 
-
     <b-card class="text-dark bg-light">
         <b-accordion flush>
             <b-accordion-item title="Accordion Item #1">
@@ -77,7 +74,6 @@ Add `flush` property to remove the default background-color, some borders, and s
             </b-accordion-item>
         </b-accordion>
     </b-card>
-
 
 ```html
 <b-accordion flush>
@@ -103,7 +99,6 @@ Add `flush` property to remove the default background-color, some borders, and s
 
 Add `free` property to make accordion items stay open when another item is opened.
 
-
     <b-card class="text-dark">
         <b-accordion free>
             <b-accordion-item title="Accordion Item #1">
@@ -117,7 +112,6 @@ Add `free` property to make accordion items stay open when another item is opene
             </b-accordion-item>
         </b-accordion>
     </b-card>
-
 
 ```html
 <b-accordion free>
@@ -148,6 +142,4 @@ Add `free` property to make accordion items stay open when another item is opene
 </b-accordion>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

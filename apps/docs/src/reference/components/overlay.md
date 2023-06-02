@@ -27,7 +27,6 @@ The overlay visibility is controlled via the `show` prop. By default, the overla
 
 **Default wrapping mode example:**
 
-
 <b-card>
   <b-overlay :show="showOverlayEx1" rounded="sm">
     <b-card title="Card with overlay" :aria-hidden="showOverlayEx1 ? 'true' : null">
@@ -40,7 +39,6 @@ The overlay visibility is controlled via the `show` prop. By default, the overla
   </b-overlay>
   <b-button class="mt-3" @click="showOverlayEx1 = !showOverlayEx1">Toggle overlay</b-button>
 </b-card>
-
 
 ```html
 <template>
@@ -76,7 +74,6 @@ one of Bootstrap's
 [background variant utility classes](/docs/reference/color-variants#background-and-border-variants).
 Control the opacity of the backdrop via the `opacity` prop (opacity values can range from `0` to
 `1`). And background blurring can be controlled via the `blur` prop.
-
 
 <b-card>
   <div class="row">
@@ -123,7 +120,6 @@ Control the opacity of the backdrop via the `opacity` prop (opacity values can r
     </b-col>
    </div>
 </b-card>
-
 
 ```html
 <template>
@@ -219,7 +215,6 @@ can control the appearance of the spinner via the following props:
   current font color.
 - `spinner-small`: Set to `true` to render a small size spinner.
 
-
 <b-card>
     <b-overlay
       show
@@ -239,7 +234,6 @@ can control the appearance of the spinner via the following props:
       </b-card>
     </b-overlay>
 </b-card>
-
 
 ```html
 <b-card>
@@ -282,7 +276,6 @@ Possible values are:
 - `'left'` for rounding only the two left corners
 - `'right'` for rounding only the two right corners
 
-
 <b-card>
     <b-button @click="showRoundedEx = !showRoundedEx">Toggle overlay</b-button>
     <b-row class="text-center mt-3">
@@ -300,7 +293,6 @@ Possible values are:
       </b-col>
     </b-row>
 </b-card>
-
 
 ```html
 <template>
@@ -346,7 +338,6 @@ Possible values are:
 Place custom content in the overlay (replacing the default spinner) via the optionally scoped slot
 `overlay`.
 
-
 <b-card>
     <b-overlay :show="showCustomEx" rounded="sm" @shown="onShown" @hidden="onHidden">
       <b-card title="Card with custom overlay content" :aria-hidden="showCustomEx ? 'true' : null">
@@ -372,7 +363,6 @@ Place custom content in the overlay (replacing the default spinner) via the opti
       </template>
     </b-overlay>
 </b-card>
-
 
 ```html
 <template>
@@ -438,7 +428,6 @@ region. To disable centering, set the `no-center` prop to `true`.
 In the following example, we have set the `no-center` prop, and absolutely positioned the custom
 overlay slot content at the top right.
 
-
 <b-card>
     <b-overlay no-center show rounded="sm">
       <template #overlay>
@@ -462,7 +451,6 @@ overlay slot content at the top right.
       </b-card>
     </b-overlay>
 </b-card>
-
 
 ```html
 <template>
@@ -508,7 +496,6 @@ the default slot). Note that this requires that the ancestor element that is to 
 relative positioning (either via the utility class `'position-relative'`, or CSS style
 `'position: relative;'`).
 
-
   <b-card>
     <div class="position-relative p-4 bg-info">
       <p class="text-light fw-bold">
@@ -530,14 +517,11 @@ relative positioning (either via the utility class `'position-relative'`, or CSS
     <b-button class="mt-3" @click="showNoWrapEx = !showNoWrapEx">Toggle overlay</b-button>
   </b-card>
 
-
 ```html
 <template>
   <b-card>
     <div class="position-relative p-4 bg-info">
-      <p class="text-light fw-bold">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+      <p class="text-light fw-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <b-card title="Card with parent overlay">
         <b-card-text>Laborum consequat non elit enim exercitation cillum.</b-card-text>
         <b-card-text>Click the button to toggle the overlay:</b-card-text>
@@ -567,7 +551,6 @@ cols, etc.). You may need to adjust the placement of `<b-overlay>` in your marku
 For example, `<b-card>` has relative positioning, so you can place the `<b-overlay no-wrap>` as a
 descendant of `<b-card>`:
 
-
   <div>
     <b-card header="Card header" footer="Card footer">
       <b-img
@@ -586,7 +569,6 @@ descendant of `<b-card>`:
     </b-card>
     <b-button @click="showNoWrapEx2 = !showNoWrapEx2" class="mt-3">Toggle overlay</b-button>
   </div>
-
 
 ```html
 <template>
@@ -681,7 +663,6 @@ Please refer to the [Accessibility section](#accessibility) for additional detai
 
 Easily create a loading button:
 
-
   <div>
     <b-overlay
       :show="loadingBuzy"
@@ -702,7 +683,6 @@ Easily create a loading button:
       </b-button>
     </b-overlay>
   </div>
-
 
 ```html
 <template>
@@ -764,7 +744,6 @@ This example is a bit more complex, but shows the use of `no-wrap`, and using th
 present the user with a prompt dialog, and once confirmed it shows an uploading status indicator.
 This example also demonstrates additional accessibility markup.
 
-
   <div>
     <b-form class="position-relative p-3" @submit.prevent="onFormSubmit">
       <div class="row">
@@ -813,7 +792,6 @@ This example also demonstrates additional accessibility markup.
       </b-overlay>
     </b-form>
   </div>
-
 
 ```html
 <template>
@@ -928,9 +906,7 @@ body only the modal body will be obscured. If you wish to obscure the entire mod
 header and footer), you will need to set the `<b-modal>` prop `body-class` to `position-static`, and
 also set the `rounded` prop on `<b-overlay>`.
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang="ts" setup>
   import {ref, nextTick} from 'vue';

@@ -1,10 +1,7 @@
 {
-    "extends": "@vue/tsconfig/tsconfig.dom.json",
-    "include": [".vitepress/**/*"],
-    "compilerOptions": {
-        "types": [
-            "components.d.ts",
-            "unplugin-icons/types/vue"
-        ]
-    }
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [".vitepress/**/*"],
+  "compilerOptions": {
+    "types": ["components.d.ts", "unplugin-icons/types/vue"]
+  }
 }

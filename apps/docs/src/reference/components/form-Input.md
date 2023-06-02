@@ -3,12 +3,10 @@
 > Create various type inputs such as: `text`, `password`, `number`, `url`, `email`, `search`,
 > `range`, `date` and more.
 
-
   <b-card>
     <b-form-input v-model="selectedText" placeholder="Enter your name"></b-form-input>
     <div class="mt-2">Value: {{ selectedText }}</div>
   </b-card>
-
 
 ```html
 <template>
@@ -31,7 +29,6 @@
 native browser HTML5 types: `text`, `password`, `email`, `number`, `url`, `tel`, `search`, `date`,
 `datetime`, `datetime-local`, `month`, `week`, `time`, `range`, or `color`.
 
-
   <b-card>
     <b-row class="my-1" v-for="type in inputTypes" :key="type">
       <b-col sm="3">
@@ -42,7 +39,6 @@ native browser HTML5 types: `text`, `password`, `email`, `number`, `url`, `tel`,
       </b-col>
     </b-row>
   </b-card>
-
 
 ```html
 <template>
@@ -124,13 +120,11 @@ background) and thumb (the value) are both styled to appear the same across brow
 Range inputs have implicit values for `min` and `max` of `0` and `100` respectively. You may specify
 new values for those using the `min` and `max` props.
 
-
   <b-card>
     <label for="range-1">Example range with min and max</label>
     <b-form-input id="range-1" v-model="rangeValue" type="range" min="0" max="5"></b-form-input>
     <div class="mt-2">Value: {{ rangeValue }}</div>
   </b-card>
-
 
 ```html
 <template>
@@ -151,13 +145,11 @@ new values for those using the `min` and `max` props.
 By default, range inputs "snap" to integer values. To change this, you can specify a `step` value.
 In the example below, we double the number of steps by using step="0.5".
 
-
   <b-card>
     <label for="range-1">Example range with min and max</label>
     <b-form-input id="range-1" v-model="rangeValueStep" type="range" min="0" max="5" step="0.5"></b-form-input>
     <div class="mt-2">Value: {{ rangeValueStep }}</div>
   </b-card>
-
 
 ```html
 <template>
@@ -196,7 +188,6 @@ Set heights using the `size` prop to `sm` or `lg` for small or large respectivel
 
 To control width, place the input inside standard Bootstrap grid column.
 
-
   <b-card>
     <b-row class="my-1">
       <b-col sm="2">
@@ -223,7 +214,6 @@ To control width, place the input inside standard Bootstrap grid column.
       </b-col>
     </b-row>
   </b-card>
-
 
 ```html
 <b-card>
@@ -276,7 +266,6 @@ Generally speaking, you'll want to use a particular state for specific types of 
 To apply one of the contextual state icons on `<b-form-input>`, set the `state` prop to `false` (for
 invalid), `true` (for valid), or `null` (no validation state).
 
-
   <b-card>
     <b-row class="my-1">
       <b-col sm="3">
@@ -303,7 +292,6 @@ invalid), `true` (for valid), or `null` (no validation state).
       </b-col>
     </b-row>
   </b-card>
-
 
 ```html
 <b-card>
@@ -336,7 +324,6 @@ invalid), `true` (for valid), or `null` (no validation state).
 
 **Live Example**
 
-
   <b-card>
     <div role="group">
       <label for="input-live">Name:</label>
@@ -356,7 +343,6 @@ invalid), `true` (for valid), or `null` (no validation state).
       <b-form-text id="input-live-help">Your full name.</b-form-text>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -433,7 +419,6 @@ The `formatter` function should return the formatted value as a _string_.
 
 Formatting does not occur if a `formatter` is not provided.
 
-
   <b-card>
     <div role="group">
       <label for="input-formatter">"Text input with formatter (on input)"</label>
@@ -457,7 +442,6 @@ Formatting does not occur if a `formatter` is not provided.
       <p><b>Value:</b> {{ formatLazyInputText }}</p>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -592,7 +576,6 @@ You can use that reference to access the native properties and methods.
 Refer to [HTMLInputElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement) for more information on
 these methods and properties. Support will vary based on input type.
 
-
   <b-card>
     <div role="group">
       <b-form-input
@@ -605,7 +588,6 @@ these methods and properties. Support will vary based on input type.
         <b-button primary @click="selectAllText">Select all text</b-button>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -637,9 +619,7 @@ these methods and properties. Support will vary based on input type.
 </script>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang="ts" setup>
   import {ref, computed} from 'vue'

@@ -26,9 +26,9 @@
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -59,18 +59,16 @@ If both the prop `text` and slot `button-content` are present, the slot `button-
 </b-dropdown>
 
 <b-dropdown v-model="show2" class="m-1">
-  <template #button-content>
-    Custom <strong>Content</strong> with <em>HTML</em> via Slot
-  </template>
+  <template #button-content> Custom <strong>Content</strong> with <em>HTML</em> via Slot </template>
   <b-dropdown-item href="#">An item</b-dropdown-item>
   <b-dropdown-item href="#">Another item</b-dropdown-item>
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
 </script>
 ```
 
@@ -118,11 +116,11 @@ The dropdown menu can either be _start_ aligned (default) or _end_ aligned to th
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
-const show3 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
+  const show3 = ref(false)
 </script>
 ```
 
@@ -146,9 +144,9 @@ Turn your dropdown menu into a drop-up menu by setting the `dropup` prop.
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -185,10 +183,10 @@ The order of precedence is top -> start -> end -> bottom
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
 </script>
 ```
 
@@ -212,9 +210,9 @@ By default, dropdowns may flip to the top, or the bottom, based on their current
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -242,17 +240,22 @@ Like to move your menu away from the toggle buttons a bit? Then use the `offset`
   <b-dropdown-item href="#">Something else here</b-dropdown-item>
 </b-dropdown>
 
-<b-dropdown v-model="show2" :offset="{alignmentAxis: 50, crossAxis: 60, mainAxis: 70}" text="Offset Dropdown 2 dimensions" class="m-2">
+<b-dropdown
+  v-model="show2"
+  :offset="{alignmentAxis: 50, crossAxis: 60, mainAxis: 70}"
+  text="Offset Dropdown 2 dimensions"
+  class="m-2"
+>
   <b-dropdown-item href="#">Action</b-dropdown-item>
   <b-dropdown-item href="#">Another action</b-dropdown-item>
   <b-dropdown-item href="#">Something else here</b-dropdown-item>
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
 </script>
 ```
 
@@ -278,9 +281,9 @@ By default, the floating element will render using _absolute_. You can change th
 </b-card>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -328,11 +331,7 @@ The `auto-close`property has 4 options
 </b-card>
 
 ```html
-<b-dropdown
-  v-model="show1"
-  text="Default Dropdown" 
-  class="m-2"
->
+<b-dropdown v-model="show1" text="Default Dropdown" class="m-2">
   <b-dropdown-item-button>Action</b-dropdown-item-button>
   <b-dropdown-item-button>Another action</b-dropdown-item-button>
   <b-dropdown-item-button>Something else here</b-dropdown-item-button>
@@ -357,24 +356,19 @@ The `auto-close`property has 4 options
   <b-dropdown-item-button>Another action</b-dropdown-item-button>
   <b-dropdown-item-button>Something else here</b-dropdown-item-button>
 </b-dropdown>
-<b-dropdown
-  v-model="show4"
-  text="Manual close (auto-close=false)"
-  :auto-close="false"
-  class="m-2"
->
+<b-dropdown v-model="show4" text="Manual close (auto-close=false)" :auto-close="false" class="m-2">
   <b-dropdown-item-button>Action</b-dropdown-item-button>
   <b-dropdown-item-button>Another action</b-dropdown-item-button>
   <b-dropdown-item-button>Something else here</b-dropdown-item-button>
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
-const show3 = ref(false)
-const show4 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
+  const show3 = ref(false)
+  const show4 = ref(false)
 </script>
 ```
 
@@ -406,9 +400,9 @@ Create a split dropdown button, where the left button provides standard `click` 
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -432,9 +426,9 @@ The left split button defaults to an element of type `<button>` (a `<b-button>` 
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -502,12 +496,12 @@ Set the `size` prop to either `sm` for a small button, or `lg` for a large butto
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
-const show3 = ref(false)
-const show4 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
+  const show3 = ref(false)
+  const show4 = ref(false)
 </script>
 ```
 
@@ -557,11 +551,11 @@ See the [Variant Reference](/docs/reference/color-variants) for a full list of b
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
-const show3 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
+  const show3 = ref(false)
 </script>
 ```
 
@@ -602,9 +596,9 @@ split button its variant via the `split-variant` prop
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -636,9 +630,9 @@ You can render the dropdown menu in dark mode by setting the `dark` property
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -689,10 +683,10 @@ By default, dropdowns act like buttons and are displayed inline. To create block
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show1 = ref(false)
-const show2 = ref(false)
+  const show1 = ref(false)
+  const show2 = ref(false)
 </script>
 ```
 
@@ -729,9 +723,9 @@ utility class to the `menu-class` prop
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -762,9 +756,9 @@ The dropdown can be created with the toggle's caret visually hidden by setting t
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -811,9 +805,9 @@ Disabled the dropdown item by setting the `disabled` prop
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -844,9 +838,9 @@ Disabled the dropdown item button by setting the `disabled` prop
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -875,9 +869,9 @@ Separate groups of related menu items with `<b-dropdown-divider>`
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -911,9 +905,9 @@ constrain/set the menu width.
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -959,9 +953,9 @@ Group a set of dropdown sub-components with an optional associated header. Place
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -993,9 +987,9 @@ Add a header to label sections of actions in any dropdown menu
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -1048,9 +1042,9 @@ When using `<b-dropdown-header>` components in the dropdown menu, it is recommen
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -1088,9 +1082,9 @@ Dropdown menus can have their inner content rendered lazily through the `lazy` p
 </b-dropdown>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const show = ref(false)
+  const show = ref(false)
 </script>
 ```
 
@@ -1103,9 +1097,7 @@ The dropdown menu is rendered with semantic `<ul>` and `<li>` elements for acces
 - [`<b-nav-item-dropdown>`](/bootstrap-vue-next/components/nav#dropdown-support) for dropdown support inside `<b-nav>` and `<n-navbar>`
 - [Router Link Support](/bootstrap-vue-next/reference/router-links) reference for information about router-link specific props available on `<b-dropdown-item>`
 
-
   <ComponentReference></ComponentReference>
-
 
 <script setup lang="ts">
 import {ref} from 'vue'

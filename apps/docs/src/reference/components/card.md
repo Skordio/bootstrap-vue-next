@@ -14,7 +14,6 @@ element. This is easily customized via styles or standard Bootstrap v4 sizing cl
 
 Change the default `div` root tag to any other HTML element by specifying via the `tag` prop
 
-
   <b-card>
     <b-card
         title="Card Title"
@@ -31,7 +30,6 @@ Change the default `div` root tag to any other HTML element by specifying via th
         <b-button href="#" variant="primary">Go somewhere</b-button>
     </b-card>
   </b-card>
-
 
 ```html
 <div>
@@ -65,7 +63,6 @@ within a card.
 
 By default, the `<b-card>` content is automatically placed in a `<b-card-body>` section:
 
-
   <b-card>
     <b-card class="text-center">
         <div class="bg-secondary text-light">
@@ -75,7 +72,6 @@ By default, the `<b-card>` content is automatically placed in a `<b-card-body>` 
         </div>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -92,7 +88,6 @@ By default, the `<b-card>` content is automatically placed in a `<b-card-body>` 
 Disable the automatic `<b-card-body>` section (and associated padding) by setting the prop `no-body`
 on the `<b-card>`.
 
-
   <b-card>
     <b-card no-body class="text-center">
         <div class="bg-secondary text-light">
@@ -101,7 +96,6 @@ on the `<b-card>`.
         </div>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -133,7 +127,6 @@ within `<b-card-text>` can also be styled with the standard HTML tags.
 Links can be added and placed next to each other by adding the `.card-link` class to a `<a>` tag (or
 `<b-link>` component).
 
-
   <b-card>
     <b-card title="Card title" subtitle="Card subtitle">
       <b-card-text>
@@ -145,7 +138,6 @@ Links can be added and placed next to each other by adding the `.card-link` clas
       <b-link href="#" class="card-link">Another link</b-link>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -169,7 +161,6 @@ prop will be responsive and will adjust its width when the width of the card is 
 
 Alternatively you can manually place images inside `<b-card>` using the sub-component
 `<b-card-img>`. See the kitchen sink example below for usage.
-
 
   <b-card>
     <div>
@@ -201,7 +192,6 @@ Alternatively you can manually place images inside `<b-card>` using the sub-comp
       </b-card>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -246,7 +236,6 @@ flexible when creating a responsive horizontal card.
 
 Place the image in the background of the card by setting the boolean prop `overlay`:
 
-
   <b-card>
     <b-card
         overlay
@@ -261,7 +250,6 @@ Place the image in the background of the card by setting the boolean prop `overl
       </b-card-text>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -290,7 +278,6 @@ Add an optional header and/or footer within a card via the `header`/`footer` pro
 You can control the wrapper element tags used by setting the `header-tag` and `footer-tag` props
 (both default is `div`)
 
-
   <b-card>
     <b-card-group deck>
       <b-card
@@ -315,7 +302,6 @@ You can control the wrapper element tags used by setting the `header-tag` and `f
       </b-card>
     </b-card-group>
   </b-card>
-
 
 ```html
 <b-card>
@@ -350,7 +336,6 @@ Mix and match multiple content types to create the card you need, or throw every
 Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width
 card.
 
-
   <b-card>
     <b-card
         no-body
@@ -383,7 +368,6 @@ card.
       <b-card-img src="https://placekitten.com/480/210" alt="Image" bottom></b-card-img>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -431,7 +415,6 @@ removes the rounding of the `<b-card-img>` corners while class `overflow-hidden`
 appropriately clip the image's corners based on the border-radius of the card. Further adjustments
 may be needed depending on your card content.
 
-
   <b-card>
     <b-card no-body class="overflow-hidden" style="max-width: 540px;">
       <b-row class="g-0">
@@ -449,7 +432,6 @@ may be needed depending on your card content.
       </b-row>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -481,7 +463,6 @@ By default, cards use dark text and assume a light background. You can reverse t
 color of text within, as well as that of the card's sub-components, via the prop `text-variant`.
 Then, specify a dark background variant.
 
-
   <b-card>
     <b-card bg-variant="dark" text-variant="white" title="Card Title">
       <b-card-text>
@@ -490,7 +471,6 @@ Then, specify a dark background variant.
       <b-button href="#" variant="primary">Go somewhere</b-button>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -510,7 +490,6 @@ the `bg-variant` and `border-variant` props. Darker solid variants may require s
 `text-variant` to adjust the text color.
 
 ### Solid
-
 
   <b-card>
     <div>
@@ -553,7 +532,6 @@ the `bg-variant` and `border-variant` props. Darker solid variants may require s
       </b-card-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -600,7 +578,6 @@ the `bg-variant` and `border-variant` props. Darker solid variants may require s
 ```
 
 ### Bordered
-
 
   <b-card>
     <div>
@@ -662,7 +639,6 @@ the `bg-variant` and `border-variant` props. Darker solid variants may require s
       </b-card-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -738,7 +714,6 @@ You can also apply the solid and border variants individually to card headers an
 `header-bg-variant`, `header-border-variant`, `header-text-variant`, `footer-bg-variant`,
 `footer-border-variant`, and `footer-text-variant` props.
 
-
   <b-card>
     <b-card
       header="Card Header"
@@ -755,7 +730,6 @@ You can also apply the solid and border variants individually to card headers an
       <b-card-text>Header and footers variants.</b-card-text>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -789,7 +763,6 @@ Integrate [`<b-nav>`](/docs/components/nav) into card headers easily.
 
 **Using the `header` slot**:
 
-
   <b-card>
     <b-card title="Card Title" body-class="text-center" header-tag="nav">
       <template #header>
@@ -805,7 +778,6 @@ Integrate [`<b-nav>`](/docs/components/nav) into card headers easily.
      <b-button variant="primary">Go somewhere</b-button>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -829,7 +801,6 @@ Integrate [`<b-nav>`](/docs/components/nav) into card headers easily.
 
 **Using `<b-card-header>` sub-component:**
 
-
   <b-card>
     <b-card no-body>
       <b-card-header header-tag="nav">
@@ -848,7 +819,6 @@ Integrate [`<b-nav>`](/docs/components/nav) into card headers easily.
       </b-card-body>
     </b-card>
   </b-card>
-
 
 ```html
 <b-card>
@@ -886,7 +856,6 @@ Card groups use display: flex; to achieve their uniform sizing.
 
 When using card groups with footers, their content will automatically line up.
 
-
   <b-card>
     <b-card-group>
       <b-card title="Title" img-src="https://placekitten.com/g/300/450" img-alt="Image" img-top>
@@ -917,7 +886,6 @@ When using card groups with footers, their content will automatically line up.
       </b-card>
     </b-card-group>
   </b-card>
-
 
 ```html
 <b-card>
@@ -958,7 +926,6 @@ Need a set of equal width and height cards that aren't attached to one another? 
 setting the `deck` prop. And just like with regular card groups, card footers in decks will
 automatically line up.
 
-
   <b-card>
     <b-card-group deck>
       <b-card title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
@@ -989,7 +956,6 @@ automatically line up.
       </b-card>
     </b-card-group>
   </b-card>
-
 
 ```html
 <b-card>
@@ -1032,7 +998,6 @@ alignment. Cards are ordered from top to bottom and left to right.
 
 Heads up! Your mileage with card columns may vary. To prevent cards breaking across columns, we must
 set them to display: inline-block as column-break-inside: avoid isn't a bulletproof solution yet.
-
 
   <b-card>
     <b-card-group columns>
@@ -1088,7 +1053,6 @@ set them to display: inline-block as column-break-inside: avoid isn't a bulletpr
       </b-card>
     </b-card-group>
   </b-card>
-
 
 ```html
 <b-card>
@@ -1147,6 +1111,4 @@ set them to display: inline-block as column-break-inside: avoid isn't a bulletpr
 </b-card>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

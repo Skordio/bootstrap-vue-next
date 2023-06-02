@@ -42,7 +42,7 @@ npm i unplugin-icons unplugin-vue-components @vue/compiler-sfc -D
 
 ```ts
 // vite.config.js/ts
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -54,12 +54,12 @@ export default defineConfig({
     vue(),
     Components({
       resolvers: [IconsResolve()],
-      dts: true
+      dts: true,
     }),
     Icons({
       compiler: 'vue3',
-      autoInstall: true
-    })
+      autoInstall: true,
+    }),
   ],
 })
 ```
@@ -73,9 +73,7 @@ If you are using TypeScript you will want to add the `unplugin-icons/types/vue` 
 {
   "include": ["components.d.ts"],
   "compilerOptions": {
-    "types": [
-      "unplugin-icons/types/vue",
-    ]
+    "types": ["unplugin-icons/types/vue"]
   }
 }
 ```
@@ -125,7 +123,7 @@ npm i unplugin-icons @vue/compiler-sfc @iconify-json/bi -D
 
 ```ts
 // vite.config.ts
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Icons from 'unplugin-icons/vite'
 
@@ -134,8 +132,8 @@ export default defineConfig({
   plugins: [
     vue(),
     Icons({
-      compiler: 'vue3'
-    })
+      compiler: 'vue3',
+    }),
   ],
 })
 ```
@@ -153,9 +151,9 @@ Using this method, you will need to manually import each icon:
 </template>
 
 <script setup lang="ts">
-import IBi0Circle from '~icons/bi/0-circle'
-import IBiActivity from '~icons/bi/activity'
-// import IMdiAccountBox from '~icons/mdi/account-box'
-// import IFaAngellist from '~icons/mdi/angellist'
+  import IBi0Circle from '~icons/bi/0-circle'
+  import IBiActivity from '~icons/bi/activity'
+  // import IMdiAccountBox from '~icons/mdi/account-box'
+  // import IFaAngellist from '~icons/mdi/angellist'
 </script>
 ```

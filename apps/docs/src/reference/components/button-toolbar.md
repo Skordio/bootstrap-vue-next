@@ -4,7 +4,6 @@
 
 **Example 1:** with button groups
 
-
   <b-card>
     <div>
       <b-button-toolbar key-nav aria-label="Toolbar with button groups">
@@ -24,7 +23,6 @@
       </b-button-toolbar>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -48,7 +46,6 @@
 
 **Example 2:** with mixture of small button group and small input group
 
-
   <b-card>
     <div>
       <b-button-toolbar aria-label="Toolbar with button groups and input groups">
@@ -62,7 +59,6 @@
       </b-button-toolbar>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -79,7 +75,6 @@
 ```
 
 **Example 3:** with button groups and dropdown menu
-
 
   <b-card>
     <div>
@@ -101,7 +96,6 @@
       </b-button-toolbar>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -133,7 +127,6 @@ example above, you'll likely need some utility classes though to space things pr
 
 Note, if you want smaller or larger buttons or controls, set the `size` prop directly on the
 `<b-button-group>`, `<b-input-group>`, and `<b-dropdown>` components.
-
 
   <b-card>
     <div>
@@ -173,7 +166,6 @@ Note, if you want smaller or larger buttons or controls, set the `size` prop dir
       </b-button-toolbar>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -221,7 +213,6 @@ Note, if you want smaller or larger buttons or controls, set the `size` prop dir
 Make the toolbar span the maximum available width, by increasing spacing between the button groups,
 input groups and dropdowns, by setting the prop `justify`.
 
-
   <b-card>
     <div>
       <b-button-toolbar justify aria-label="Toolbar with justify">
@@ -242,7 +233,6 @@ input groups and dropdowns, by setting the prop `justify`.
       </b-button-toolbar>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -265,6 +255,4 @@ input groups and dropdowns, by setting the prop `justify`.
 </div>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

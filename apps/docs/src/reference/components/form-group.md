@@ -4,7 +4,6 @@
 > to pair form controls with a legend or label, and to provide help text and invalid/valid feedback
 > text, as well as visual (color) contextual state feedback.
 
-
   <b-card>
     <div>
       <b-form-group
@@ -21,7 +20,6 @@
       </b-form-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -104,7 +102,6 @@ See the [Layout and Grid System](/docs/components/layout#how-it-works) docs for 
 | `content-cols-lg` | Applies to breakpoint `lg` and up |
 | `content-cols-xl` | Applies to breakpoint `xl` and up |
 
-
   <b-card>
     <div>
       <b-form-group
@@ -121,7 +118,6 @@ See the [Layout and Grid System](/docs/components/layout#how-it-works) docs for 
       </b-form-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -148,7 +144,6 @@ You can control the label text size match the size of your form input(s) via the
 `label-size` prop. Values can be `'sm'` or `'lg'` for small or large label, respectively. Sizes work
 for both horizontal and non-horizontal form groups.
 
-
   <b-card>
     <div>
       <b-form-group label-cols="4" label-cols-lg="2" label-size="sm" label="Small" label-for="input-sm">
@@ -162,7 +157,6 @@ for both horizontal and non-horizontal form groups.
       </b-form-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -197,7 +191,6 @@ Alignment has no effect if the `label-sr-only` prop is set.
 
 Feel free to nest `<b-form-group>` components to produce advanced form layouts and semantic grouping
 of related form controls:
-
 
   <b-card>
     <div>
@@ -257,7 +250,6 @@ of related form controls:
     </div>
   </b-card>
 
-
 ```html
 <div>
   <b-card bg-variant="light">
@@ -290,16 +282,8 @@ of related form controls:
       >
         <b-form-input id="nested-country"></b-form-input>
       </b-form-group>
-      <b-form-group
-        label="Ship via:"
-        label-cols-sm="3"
-        label-align-sm="end"
-        class="mb-0"
-      >
-        <b-form-radio-group
-          class="pt-2"
-          :options="['Air', 'Courier', 'Mail']"
-        ></b-form-radio-group>
+      <b-form-group label="Ship via:" label-cols-sm="3" label-align-sm="end" class="mb-0">
+        <b-form-radio-group class="pt-2" :options="['Air', 'Courier', 'Mail']"></b-form-radio-group>
       </b-form-group>
     </b-form-group>
   </b-card>
@@ -382,7 +366,6 @@ You can make a floating label by setting the property `floating` to true and spe
 
 ### Example
 
-
   <b-card>
     <div>
       <b-form-group
@@ -399,7 +382,6 @@ You can make a floating label by setting the property `floating` to true and spe
       </b-form-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -471,9 +453,7 @@ auto-assigned to the input. When the form group has multiple form controls, make
 attribute to each control yourself by using the `ariaDescribedby` prop value from the optionally
 scoped `default` slot.
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang="ts" setup>
   import {computed, ref} from 'vue'

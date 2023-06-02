@@ -38,7 +38,7 @@ You can adjust the width using props `width` and `cols`. Cols is a number value 
 
 Bootstrap supports two types of animations, `wave` and `glow`
 
-* Note: when using `<b-placeholder-card>`, the image does not inherit an animation
+- Note: when using `<b-placeholder-card>`, the image does not inherit an animation
 
 <b-placeholder-card style="max-width: 20rem; " animation="glow" />
 <b-placeholder-card style="max-width: 20rem; " animation="wave" />
@@ -94,7 +94,7 @@ The `b-placeholder-wrapper` is a renderless component that picks between a 'load
 <b-button @click="startLoading">Restart</b-button>
 
 ```html
-<b-placeholder-wrapper :loading="loading"> 
+<b-placeholder-wrapper :loading="loading">
   <template #loading>
     <b-placeholder-card style="max-width: 20rem;" no-footer />
   </template>
@@ -116,24 +116,24 @@ The `b-placeholder-wrapper` is a renderless component that picks between a 'load
 <b-button @click="startLoading">Restart</b-button>
 
 <script setup lang="ts">
-import {ref, onMounted, watchEffect} from 'vue'
+  import {ref, onMounted, watchEffect} from 'vue'
 
-const loading = ref(false)
+  const loading = ref(false)
 
-watchEffect(() => {
-  if(loading.value === true){
-    setTimeout(() => {
-      loading.value = false
-    }, 5000)
+  watchEffect(() => {
+    if (loading.value === true) {
+      setTimeout(() => {
+        loading.value = false
+      }, 5000)
+    }
+  })
+
+  const startLoading = () => {
+    if (loading.value === true) return
+    loading.value = true
   }
-})
 
-const startLoading = () => {
-  if(loading.value === true) return
-  loading.value = true
-}
-
-onMounted(startLoading)
+  onMounted(startLoading)
 </script>
 ```
 
@@ -192,9 +192,7 @@ The footer also exposes some props that you can use to adjust the behavior of a 
 
 ```html
 <b-placeholder-card img-src="https://picsum.photos/1024/480/?image=1" img-bottom no-header>
-  <template #footer>
-    Footer
-  </template>
+  <template #footer> Footer </template>
   <template #default>
     <b-placeholder />
     <b-placeholder width="65" variant="danger" />
@@ -211,17 +209,18 @@ You can adjust the number of columns and rows using props `columns` and `rows` r
 
 Optionally, you can manually adjust any scope of the table using slots. The following slots are available: `thead`, `default`, and `tfoot`. Do note that the slots wrap the **entire** table scope, slot `thead` is the entire thead, and slot `default` is the entire tbody, so you will likely need to manually wrap your slot usages in these elements if you plan on using them
 
-<b-placeholder-table 
-  columns="3" 
-  rows="2" 
-  show-footer 
-  footer-variant="info" 
-  header-size="lg" 
-  footer-size="xs" 
-  footer-columns="1" 
-  header-columns="4"
->
-  <template #default>
+<b-placeholder-table
+columns="3"
+rows="2"
+show-footer
+footer-variant="info"
+header-size="lg"
+footer-size="xs"
+footer-columns="1"
+header-columns="4"
+
+> <template #default>
+
     <tbody>
         <tr>
           <td>
@@ -238,44 +237,43 @@ Optionally, you can manually adjust any scope of the table using slots. The foll
           </td>
         </tr>
     </tbody>
+
   </template>
 </b-placeholder-table>
 
 ```html
-<b-placeholder-table 
-  columns="3" 
-  rows="2" 
-  show-footer 
-  footer-variant="info" 
-  header-size="lg" 
-  footer-size="xs" 
-  footer-columns="1" 
+<b-placeholder-table
+  columns="3"
+  rows="2"
+  show-footer
+  footer-variant="info"
+  header-size="lg"
+  footer-size="xs"
+  footer-columns="1"
   header-columns="4"
 >
   <template #default>
     <tbody>
-        <tr>
-          <td>
-            <b-placeholder size="lg" variant="secondary" />
-            <b-placeholder size="sm" variant="secondary" />
-            <b-placeholder size="xs" variant="secondary" />
-          </td>
-          <td>
-            <b-placeholder variant="warning" />
-            <b-placeholder animation="wave" variant="warning" />
-          </td>
-          <td>
-            <b-placeholder animation="glow" variant="danger" />
-          </td>
-        </tr>
+      <tr>
+        <td>
+          <b-placeholder size="lg" variant="secondary" />
+          <b-placeholder size="sm" variant="secondary" />
+          <b-placeholder size="xs" variant="secondary" />
+        </td>
+        <td>
+          <b-placeholder variant="warning" />
+          <b-placeholder animation="wave" variant="warning" />
+        </td>
+        <td>
+          <b-placeholder animation="glow" variant="danger" />
+        </td>
+      </tr>
     </tbody>
   </template>
 </b-placeholder-table>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script setup lang="ts">
 import {ref, onMounted, watchEffect} from 'vue'

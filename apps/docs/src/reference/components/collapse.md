@@ -4,7 +4,6 @@
 > Includes support for making accordions. Visibility can be easily toggled with our
 > [`v-b-toggle` directive](/docs/directives/toggle), or via `v-model`.
 
-
   <b-card>
     <div>
       <b-button v-b-toggle.collapse-1 variant="primary">Toggle Collapse</b-button>
@@ -19,7 +18,6 @@
       </b-collapse>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -41,7 +39,6 @@
 Other elements can easily toggle `<b-collapse>` components using the
 [`v-b-toggle` directive](/docs/directives/toggle).
 
-
   <b-card>
     <div>
       <!-- Using modifiers -->
@@ -54,7 +51,6 @@ Other elements can easily toggle `<b-collapse>` components using the
       </b-collapse>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -75,7 +71,6 @@ Other elements can easily toggle `<b-collapse>` components using the
 
 To make the `<b-collapse>` show initially, set the `v-model` prop:
 
-
   <b-card>
     <div>
       <b-button v-b-toggle.collapse-3 class="m-1">Toggle Collapse</b-button>
@@ -84,7 +79,6 @@ To make the `<b-collapse>` show initially, set the `v-model` prop:
       </b-collapse>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -109,7 +103,6 @@ are not automatically placed on the trigger button (as is the case when using th
 directive). In this example we **must control the attributes ourselves** for proper accessibility
 support.
 
-
   <b-card>
     <div>
       <b-button
@@ -125,7 +118,6 @@ support.
       </b-collapse>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -160,7 +152,6 @@ multiple target Ids using _modifiers_.
 
 You can also pass multiple target Ids via the directive _value_ in BootstrapVueNext.
 
-
   <b-card>
     <div>
       <!-- Via multiple directive modifiers -->
@@ -178,7 +169,6 @@ You can also pass multiple target Ids via the directive _value_ in BootstrapVueN
       </b-collapse>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -203,7 +193,6 @@ You can also pass multiple target Ids via the directive _value_ in BootstrapVueN
 Turn a group of `<b-collapse>` components into an accordion by supplying an accordion group
 identifier via the `accordion` prop. Note that only one collapse in an accordion group can be open
 at a time.
-
 
   <b-card>
     <div id="my-accordion" class="accordion" role="tablist">
@@ -240,7 +229,6 @@ at a time.
       </b-card>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -328,7 +316,6 @@ The following properties are available for the `header` and `footer` slots:
 | `close`   | Function | When called, will close the collapse  |
 | `id`      | String   | The ID of the collapsible element     |
 
-
   <b-card>
     <div>
       <b-collapse id="my-collapse">
@@ -343,14 +330,13 @@ The following properties are available for the `header` and `footer` slots:
     </div>
   </b-card>
 
-
 ```html
 <b-card>
   <div>
     <b-collapse id="my-collapse">
       <template #header="{visible, toggle, id}">
         <b-button variant="primary" :aria-expanded="visible" :aria-controls="id" @click="toggle">
-            <span v-if="visible">Close</span><span v-else>Open</span> My Collapse
+          <span v-if="visible">Close</span><span v-else>Open</span> My Collapse
         </b-button>
       </template>
       <!-- Content here -->
@@ -394,9 +380,7 @@ inside an element with `role="tablist"` and set `role="tab"` on each trigger ele
 order to help screen reader users navigate the accordion group. Unfortunately, BootstrapVueNext cannot
 apply those roles for you automatically, as it depends on your final document markup.
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang="ts" setup>
   import {ref, computed} from 'vue'

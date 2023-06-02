@@ -6,7 +6,6 @@
 
 Button Groups are an easy way to group a series of buttons together.
 
-
   <b-card>
     <div>
       <b-button-group aria-label="Basic example">
@@ -23,7 +22,6 @@ Button Groups are an easy way to group a series of buttons together.
       </b-button-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -54,7 +52,6 @@ In addition, groups should be given an explicit label, as most assistive technol
 Set the `size` prop to `lg` or `sm` to render larger or smaller, respectively, buttons. There is no
 need to specify the size on the individual buttons.
 
-
   <b-card>
     <div>
       <b-button-group>
@@ -78,7 +75,6 @@ need to specify the size on the individual buttons.
       </b-button-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -111,7 +107,6 @@ need to specify the size on the individual buttons.
 Make a set of buttons appear vertically stacked rather than horizontally by setting the `vertical`
 prop. Split button dropdowns are not supported here.
 
-
   <b-card>
     <div>
       <b-button-group vertical>
@@ -121,7 +116,6 @@ prop. Split button dropdowns are not supported here.
       </b-button-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -139,7 +133,6 @@ prop. Split button dropdowns are not supported here.
 
 Add [`<b-dropdown>`](/docs/components/dropdown) menus directly inside your `<b-button-group>`. Note
 that split dropdown menus are not supported when prop `vertical` is set.
-
 
   <b-card>
     <div>
@@ -160,7 +153,6 @@ that split dropdown menus are not supported when prop `vertical` is set.
       </b-button-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -189,6 +181,4 @@ that split dropdown menus are not supported when prop `vertical` is set.
 Also check out the [`<b-button-toolbar>`](/docs/components/button-toolbar) component for generating
 toolbars containing button groups and input groups.
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

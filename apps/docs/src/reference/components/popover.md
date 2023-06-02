@@ -1,5 +1,3 @@
 # Popover
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

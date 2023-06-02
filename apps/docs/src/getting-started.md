@@ -64,18 +64,18 @@ The following is an example of a basic `vite.config.js/ts`. All you need to do i
 
 ```ts
 // vite.config.js/ts
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
-import { BootstrapVueNextResolver } from 'unplugin-vue-components/resolvers'
+import {BootstrapVueNextResolver} from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   plugins: [
     vue(),
     Components({
-      resolvers: [BootstrapVueNextResolver()]
-    })
-  ]
+      resolvers: [BootstrapVueNextResolver()],
+    }),
+  ],
 })
 ```
 
@@ -94,7 +94,7 @@ If using TypeScript you will want to add `components.d.ts` to the `include` arra
 ```json
 // tsconfig.json
 {
-  "include": ["components.d.ts"],
+  "include": ["components.d.ts"]
 }
 ```
 
@@ -134,7 +134,7 @@ Then, add to your `main.js/ts`:
 // main.js/ts
 import App from './App.vue' // Can be a different place
 
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import BootstrapVueNext from 'bootstrap-vue-next'
 
 // Optional, since every component imports their Bootstrap functionality

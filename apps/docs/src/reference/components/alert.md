@@ -37,9 +37,7 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 ```html
 <b-alert :modelValue="true">Default Alert</b-alert>
 <b-alert variant="success" :modelValue="true">Success Alert</b-alert>
-<b-alert v-model="showDismissibleAlert" variant="danger" dismissible>
-  Dismissible Alert!
-</b-alert>
+<b-alert v-model="showDismissibleAlert" variant="danger" dismissible> Dismissible Alert! </b-alert>
 <b-alert
   v-model="dismissCountDown"
   dismissible
@@ -47,12 +45,7 @@ Alerts are available for any length of text, as well as an optional dismiss butt
   @close-countdown="countdown = $event"
 >
   <p>This alert will dismiss after {{ countdown / 1000 }} seconds...</p>
-  <b-progress
-    variant="warning"
-    :max="dismissCountDown"
-    :value="countdown"
-    height="4px"
-  />
+  <b-progress variant="warning" :max="dismissCountDown" :value="countdown" height="4px" />
 </b-alert>
 <b-button @click="dismissCountDown = dismissCountDown + 1000" variant="info" class="m-1">
   Add a second to the alert with countdown timer
@@ -62,12 +55,12 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 </b-button>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+  import {ref} from 'vue'
 
-const showDismissibleAlert = ref(false);
+  const showDismissibleAlert = ref(false)
 
-const dismissCountDown = ref(10000);
-const countdown = ref(0);
+  const dismissCountDown = ref(10000)
+  const countdown = ref(0)
 </script>
 ```
 
@@ -128,11 +121,10 @@ Using color variants to add meaning only provides a visual indication, which wil
 <b-alert :modelValue="true" variant="success">
   <h4 class="alert-heading">Well done!</h4>
   <p>
-    Aww yeah, you successfully read this important alert message. This example text is going to
-    run a bit longer so that you can see how spacing within an alert works with this kind of
-    content.
+    Aww yeah, you successfully read this important alert message. This example text is going to run
+    a bit longer so that you can see how spacing within an alert works with this kind of content.
   </p>
-  <hr>
+  <hr />
   <p class="mb-0">
     Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
   </p>
@@ -155,11 +147,21 @@ Use the `.alert-link` utility CSS class to quickly provide matching colored link
 </b-card>
 
 ```html
-<b-alert :modelValue="true" variant="primary"><a href="#" class="alert-link">Primary Alert</a></b-alert>
-<b-alert :modelValue="true" variant="secondary"><a href="#" class="alert-link">Secondary Alert</a></b-alert>
-<b-alert :modelValue="true" variant="success"><a href="#" class="alert-link">Success Alert</a></b-alert>
-<b-alert :modelValue="true" variant="danger"><a href="#" class="alert-link">Danger Alert</a></b-alert>
-<b-alert :modelValue="true" variant="warning"><a href="#" class="alert-link">Warning Alert</a></b-alert>
+<b-alert :modelValue="true" variant="primary"
+  ><a href="#" class="alert-link">Primary Alert</a></b-alert
+>
+<b-alert :modelValue="true" variant="secondary"
+  ><a href="#" class="alert-link">Secondary Alert</a></b-alert
+>
+<b-alert :modelValue="true" variant="success"
+  ><a href="#" class="alert-link">Success Alert</a></b-alert
+>
+<b-alert :modelValue="true" variant="danger"
+  ><a href="#" class="alert-link">Danger Alert</a></b-alert
+>
+<b-alert :modelValue="true" variant="warning"
+  ><a href="#" class="alert-link">Warning Alert</a></b-alert
+>
 <b-alert :modelValue="true" variant="info"><a href="#" class="alert-link">Info Alert</a></b-alert>
 <b-alert :modelValue="true" variant="light"><a href="#" class="alert-link">Light Alert</a></b-alert>
 <b-alert :modelValue="true" variant="dark"><a href="#" class="alert-link">Dark Alert</a></b-alert>
@@ -183,9 +185,9 @@ Using the `dismissible` prop it's possible to dismiss any `<b-alert>` inline. Th
 </b-card>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const dismissibleAlert = ref(true);
+  const dismissibleAlert = ref(true)
 </script>
 ```
 
@@ -215,17 +217,25 @@ To create a `<b-alert>` that dismisses automatically after some time set the `v-
 >
   Alert countdown: {{ autoDismissingAlertCountdown }} interval: {{ autoDismissingAlertInterval }}
 </b-alert>
-<b-button @click="autoDismissingAlert = autoDismissingAlert + 1000">Adjust Alert Time +1000</b-button>
-<b-button @click="autoDismissingAlert = autoDismissingAlert - 1000">Adjust Alert Time -1000</b-button>
-<b-button @click="autoDismissingAlertInterval = autoDismissingAlertInterval + 100">Adjust Alert interval +100</b-button>
-<b-button @click="autoDismissingAlertInterval = autoDismissingAlertInterval - 100">Adjust Alert interval -100</b-button>
+<b-button @click="autoDismissingAlert = autoDismissingAlert + 1000"
+  >Adjust Alert Time +1000</b-button
+>
+<b-button @click="autoDismissingAlert = autoDismissingAlert - 1000"
+  >Adjust Alert Time -1000</b-button
+>
+<b-button @click="autoDismissingAlertInterval = autoDismissingAlertInterval + 100"
+  >Adjust Alert interval +100</b-button
+>
+<b-button @click="autoDismissingAlertInterval = autoDismissingAlertInterval - 100"
+  >Adjust Alert interval -100</b-button
+>
 
 <script lang="ts" setup>
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const autoDismissingAlert = ref(10000);
-const autoDismissingAlertInterval = ref(1000);
-const autoDismissingAlertCountdown = ref(0);
+  const autoDismissingAlert = ref(10000)
+  const autoDismissingAlertInterval = ref(1000)
+  const autoDismissingAlertCountdown = ref(0)
 </script>
 ```
 
@@ -266,18 +276,18 @@ The BAlert exposes four functions to manipulate the state of an active timer: `p
 <b-button @click="stop">stop</b-button>
 
 <script setup lang="ts">
-import {ref} from 'vue'
-import type {BAlert} from 'bootstrap-vue-next'
+  import {ref} from 'vue'
+  import type {BAlert} from 'bootstrap-vue-next'
 
-const secondAutoDismissingAlert = ref(10000);
-const secondAutoDismissingAlertCountdown = ref(0);
-const myAlert = ref<null | InstanceType<typeof BAlert>>(null)
+  const secondAutoDismissingAlert = ref(10000)
+  const secondAutoDismissingAlertCountdown = ref(0)
+  const myAlert = ref<null | InstanceType<typeof BAlert>>(null)
 
-// Where 'myAlert' is the **ref** of the BAlert
-const pause = () => myAlert.value?.pause()
-const resume = () => myAlert.value?.resume()
-const restart = () => myAlert.value?.restart()
-const stop = () => myAlert.value?.stop()
+  // Where 'myAlert' is the **ref** of the BAlert
+  const pause = () => myAlert.value?.pause()
+  const resume = () => myAlert.value?.resume()
+  const restart = () => myAlert.value?.restart()
+  const stop = () => myAlert.value?.stop()
 </script>
 ```
 
@@ -286,9 +296,7 @@ const stop = () => myAlert.value?.stop()
 - `Immediate`: Will cause a timer to not start immediately upon render. A timer that is not started is not rendered. It must manually be started with `resume()` or `restart()`
 - `showOnPause`: Overwrites the behavior of showing an Alert when the timer is paused
 
-
   <ComponentReference></ComponentReference>
-
 
 <script lang="ts" setup>
 import {ref, computed} from 'vue'

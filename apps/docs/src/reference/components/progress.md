@@ -2,7 +2,6 @@
 
 Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
 
-
     <b-card>
         <b-progress :value="0" />
         <b-progress class="mt-3" :value="25" />
@@ -10,7 +9,6 @@ Documentation and examples for using Bootstrap custom progress bars featuring su
         <b-progress class="mt-3" :value="75" />
         <b-progress class="mt-3" :value="100" />
     </b-card>
-
 
 ```html
 <b-progress :value="0"></b-progress>
@@ -30,7 +28,6 @@ When creating multiple bars in a single process, place the value prop on the ind
 
 Add labels to your progress bars by either enabling `show-progress` (percentage of max) or `show-value` for the current absolute value. You may also set the precision (number of digits after the decimal) via the `precision` prop (default is `0` digits after the decimal).
 
-
     <b-card class="text-dark">
         <h5>No label</h5>
         <b-progress :value="33.3333" :max="50" class="mb-3"></b-progress>
@@ -43,7 +40,6 @@ Add labels to your progress bars by either enabling `show-progress` (percentage 
         <h5>Progress label with precision</h5>
         <b-progress :value="33.3333" :max="50" :precision="2" show-progress class="mb-3"></b-progress>
     </b-card>
-
 
 ```html
 <h5>No label</h5>
@@ -66,7 +62,6 @@ Add labels to your progress bars by either enabling `show-progress` (percentage 
 
 Need more control over the label? Provide your own label by using the default slot within a `<b-progress-bar>` sub-component, or by using the `label` or `label-html` property on `<b-progress-bar>`:
 
-
     <b-card class="text-dark">
         <h5>Custom label via default slot</h5>
         <b-progress :max="50" height="2rem">
@@ -83,7 +78,6 @@ Need more control over the label? Provide your own label by using the default sl
           <b-progress-bar :value="33.333333" :label-html="`<del>${33.333333}</del>`"></b-progress-bar>
         </b-progress>
     </b-card>
-
 
 ```html
 <h5>Custom label via default slot</h5>
@@ -111,12 +105,10 @@ Need more control over the label? Provide your own label by using the default sl
 
 The height of the progress bar can be controlled with the height prop. The height value should be a standard CSS dimension (px, rem, em, etc.). The default height is 1rem.
 
-
     <b-card>
         <b-progress :value="25" height="1px"></b-progress>
         <b-progress class="mt-3" :value="25" height="20px"></b-progress>
     </b-card>
-
 
 ```html
 <b-progress :value="25" height="1px"></b-progress>
@@ -127,14 +119,12 @@ The height of the progress bar can be controlled with the height prop. The heigh
 
 Use background variants to change the appearance of individual progress bars. The default variant is `primary`.
 
-
     <b-card>
         <b-progress variant="success" :value="25" />
         <b-progress class="mt-3" variant="info" :value="50" />
         <b-progress class="mt-3" variant="warning" :value="75" />
         <b-progress class="mt-3" variant="danger" :value="100" />
     </b-card>
-
 
 ```html
 <b-progress variant="success" :value="25" />
@@ -147,7 +137,6 @@ Use background variants to change the appearance of individual progress bars. Th
 
 Include multiple `<b-progress-bar>` sub-components in a `<b-progress>` component to build a horizontally stacked set of progress bars.
 
-
     <b-card>
         <b-progress>
             <b-progress-bar :value="15" />
@@ -155,7 +144,6 @@ Include multiple `<b-progress-bar>` sub-components in a `<b-progress>` component
             <b-progress-bar :value="20" variant="info" />
         </b-progress>
     </b-card>
-
 
 ```html
 <b-progress>
@@ -169,7 +157,6 @@ Include multiple `<b-progress-bar>` sub-components in a `<b-progress>` component
 
 Set `striped` to apply a stripe via CSS gradient over the progress bar's background variant.
 
-
     <b-card>
         <b-progress striped :value="10" />
         <b-progress striped class="mt-3" variant="success" :value="25" />
@@ -177,7 +164,6 @@ Set `striped` to apply a stripe via CSS gradient over the progress bar's backgro
         <b-progress striped class="mt-3" variant="warning" :value="75" />
         <b-progress striped class="mt-3" variant="danger" :value="100" />
     </b-card>
-
 
 ```html
 <b-progress striped :value="10"></b-progress>
@@ -191,16 +177,12 @@ Set `striped` to apply a stripe via CSS gradient over the progress bar's backgro
 
 The striped gradient can also be animated by setting the `animated` prop.
 
-
     <b-card>
         <b-progress :value="75" striped :animated="animate"></b-progress>
         <b-button class="mt-3" @click="animate = !animate">Toggle animation</b-button>
     </b-card>
 
-
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang="ts">
 import { ref } from 'vue';

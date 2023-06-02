@@ -10,7 +10,6 @@ The `<b-table-simple>` component gives the user complete control over the render
 
 Since b-table-simple is just a wrapper component, of which you will need to render content inside, it does not provide any of the advanced features of `<b-table>` (i.e. row events, head events, sorting, pagination, filtering, foot-clone, items, fields, etc.).
 
-
   <b-table-simple hover small caption-top responsive>
       <caption>Items sold in August, grouped by Country and City:</caption>
       <colgroup><col><col></colgroup>
@@ -84,7 +83,6 @@ Since b-table-simple is just a wrapper component, of which you will need to rend
         </b-tr>
       </b-tfoot>
     </b-table-simple>
-
 
 ```html
 <b-table-simple hover small caption-top responsive>
@@ -182,7 +180,6 @@ A bit of additional markup is required on your `<b-table-simple>` body cells whe
 
 Here is the same table as above, set to be always stacked, which has the extra markup to handle stacked mode (specifically for generating the cell headings):
 
-
   <b-table-simple hover small caption-top stacked>
       <caption>Items sold in August, grouped by Country and City:</caption>
       <colgroup><col><col></colgroup>
@@ -256,7 +253,6 @@ Here is the same table as above, set to be always stacked, which has the extra m
         </b-tr>
       </b-tfoot>
     </b-table-simple>
-
 
 ```html
 <b-table-simple hover small caption-top stacked>
@@ -352,7 +348,6 @@ Note: stacked mode with `<b-table-simple>` requires that you use the BootstrapVu
 
 Sticky columns are supported with `<b-table-simple>`, but you will need to set the sticky-column prop on each table cell (in the thead, tbody, and tfoot row groups) in the column that is to be sticky. For example:
 
-
   <b-table-simple responsive>
     <b-thead>
       <b-tr>
@@ -389,7 +384,6 @@ Sticky columns are supported with `<b-table-simple>`, but you will need to set t
       </b-tr>
     </b-tfoot>
   </b-table-simple>
-
 
 ```html
 <b-table-simple responsive>
@@ -432,6 +426,4 @@ Sticky columns are supported with `<b-table-simple>`, but you will need to set t
 
 As with `<b-table>` and `<b-table-lite>`, sticky columns are not supported when the stacked prop is set on `<b-table-simple>`.
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

@@ -35,7 +35,6 @@ _prev_, _next_, and _last_ buttons.
 
 For a full list of all available slots see the [Slots](#comp-ref-b-pagination-slots) section below.
 
-
   <b-card>
     <div class="overflow-auto py-2">
       <!-- Use text in props -->
@@ -78,7 +77,6 @@ For a full list of all available slots see the [Slots](#comp-ref-b-pagination-sl
       Current page : {{ ex1CurrentPage }}
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -167,7 +165,6 @@ The slot `page` is always scoped, while the slots `first-text`, `prev-text`, `ne
 If you prefer to have buttons with the first and last page number to go to the corresponding page,
 use the `first-number` and `last-number` props.
 
-
   <b-card>
     <div class="overflow-auto px-2">
       <div>
@@ -200,7 +197,6 @@ use the `first-number` and `last-number` props.
       </div>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -251,7 +247,6 @@ use the `first-number` and `last-number` props.
 Optionally change from the default button size by setting the `size` prop to either `'sm'` for
 smaller buttons or `'lg'` for larger buttons.
 
-
   <b-card>
     <div class="overflow-auto">
       <div>
@@ -268,7 +263,6 @@ smaller buttons or `'lg'` for larger buttons.
       </div>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -301,7 +295,6 @@ smaller buttons or `'lg'` for larger buttons.
 
 Easily switch to pill style buttons by setting the `pills` prop
 
-
   <b-card>
     <div class="overflow-auto">
       <div>
@@ -318,7 +311,6 @@ Easily switch to pill style buttons by setting the `pills` prop
       </div>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -354,7 +346,6 @@ Easily switch to pill style buttons by setting the `pills` prop
 By default, the pagination component is left aligned. Change the alignment to `center`, `end`
 or `fill` by setting the prop `align` to the appropriate value.
 
-
   <b-card>
     <div class="overflow-auto">
       <div>
@@ -375,7 +366,6 @@ or `fill` by setting the prop `align` to the appropriate value.
       </div>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -451,9 +441,7 @@ recommended unless the content of the button textually conveys its purpose.
 
 ### Keyboard navigation support
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang='ts' setup>
   import {ref, computed} from 'vue'
