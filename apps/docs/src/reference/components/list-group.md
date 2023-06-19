@@ -4,7 +4,6 @@
 > items can be modified to support just about any content within. They can also be used as
 > navigation via various props.
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item>Cras justo odio</b-list-group-item>
@@ -14,7 +13,6 @@
       <b-list-group-item>Vestibulum at eros</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -30,7 +28,6 @@
 
 Set the `active` prop on a `<b-list-group-item>` to indicate the current active selection.
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item>Cras justo odio</b-list-group-item>
@@ -40,7 +37,6 @@ Set the `active` prop on a `<b-list-group-item>` to indicate the current active 
       <b-list-group-item>Vestibulum at eros</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -57,7 +53,6 @@ Set the `active` prop on a `<b-list-group-item>` to indicate the current active 
 Set the `disabled` prop on a `<b-list-group-item>` to make it appear disabled (also works with
 actionable items. see below).
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item disabled>Cras justo odio</b-list-group-item>
@@ -67,7 +62,6 @@ actionable items. see below).
       <b-list-group-item>Vestibulum at eros</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -84,7 +78,6 @@ actionable items. see below).
 Turn a `<b-list-group-item>` into an actionable _link_ (`<a href="...">`) by specifying either an
 `href` prop or ~~[router-link](/docs/reference/router-links)~~ `to` prop.
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item href="#some-link">Awesome link</b-list-group-item>
@@ -93,7 +86,6 @@ Turn a `<b-list-group-item>` into an actionable _link_ (`<a href="...">`) by spe
       <b-list-group-item href="#foobar" disabled>Disabled link</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -106,7 +98,6 @@ Turn a `<b-list-group-item>` into an actionable _link_ (`<a href="...">`) by spe
 
 Or if you prefer `<button>` elements over links, set the `button` prop to `true`.
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item button>Button item</b-list-group-item>
@@ -115,7 +106,6 @@ Or if you prefer `<button>` elements over links, set the `button` prop to `true`
       <b-list-group-item button>This is a button too</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -140,7 +130,6 @@ props.~~
 Use contextual variants to style list items with a stateful background and color, via the `variant`
 prop.
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item>Default list group item</b-list-group-item>
@@ -154,7 +143,6 @@ prop.
       <b-list-group-item variant="dark">Dark list group item</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -174,7 +162,6 @@ Contextual variants also work with action items. Note the addition of the hover 
 present in the previous example. Also supported is the `active` state; set it to indicate an active
 selection on a contextual list group item.
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item href="#">Default list group item</b-list-group-item>
@@ -188,7 +175,6 @@ selection on a contextual list group item.
       <b-list-group-item href="#" variant="dark">Dark list group item</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -216,7 +202,6 @@ means, such as additional text hidden using the `.visually-hidden` class.
 Add [badges](/docs/components/badge) to any list group item to show unread counts, activity, and
 more with the help of some [flex utility classes](/docs/reference/utility-classes).
 
-
   <b-card class="bd-example">
     <b-list-group>
       <b-list-group-item class="d-flex justify-content-between align-items-center">
@@ -233,7 +218,6 @@ more with the help of some [flex utility classes](/docs/reference/utility-classe
       </b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -258,7 +242,6 @@ more with the help of some [flex utility classes](/docs/reference/utility-classe
 
 Add the `numbered` property to opt into numbered list group items. Numbers are generated via CSS (as opposed to a `<ol>s` default browser styling) for better placement inside list group items and to allow for better customization.
 
-
   <b-card class="bd-example">
     <b-list-group numbered>
       <b-list-group-item>Cras justo odioo</b-list-group-item>
@@ -268,7 +251,6 @@ Add the `numbered` property to opt into numbered list group items. Numbers are g
       <b-list-group-item>Vestibulum at eros</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-card>
@@ -283,7 +265,6 @@ Add the `numbered` property to opt into numbered list group items. Numbers are g
 ```
 
 These work great with custom content as well.
-
 
   <b-card class="bd-example">
     <b-list-group numbered>
@@ -310,7 +291,6 @@ These work great with custom content as well.
       </b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-card>
@@ -348,7 +328,6 @@ With numbered set, the `b-list-group`is always rendered as a `ol`, while the `b-
 Incorporate list groups into [cards](/docs/components/card). Use the `<b-list-group>` prop `flush`
 prop when using cards with `no-body` to make the sides of the list group flush with the card.
 
-
   <b-card-group deck>
     <b-card header="Card with list group">
       <b-list-group>
@@ -375,7 +354,6 @@ prop when using cards with `no-body` to make the sides of the list group flush w
       </b-card-body>
     </b-card>
   </b-card-group>
-
 
 ```html
 <b-card-group deck>
@@ -421,7 +399,6 @@ list group item.
 
 **Always horizontal:**
 
-
   <b-card>
     <b-list-group horizontal>
       <b-list-group-item>Cras justo odio</b-list-group-item>
@@ -429,7 +406,6 @@ list group item.
       <b-list-group-item>Morbi leo risus</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <b-card>
@@ -443,7 +419,6 @@ list group item.
 
 **Horizontal at breakpoint `md` and above:**
 
-
   <b-card>
     <b-list-group horizontal="md">
       <b-list-group-item>Cras justo odio</b-list-group-item>
@@ -451,7 +426,6 @@ list group item.
       <b-list-group-item>Morbi leo risus</b-list-group-item>
     </b-list-group>
   </b-card>
-
 
 ```html
 <div>
@@ -467,7 +441,6 @@ list group item.
 
 Add nearly any HTML or component within, even for linked list groups like the one below, with the
 help of [flexbox utility classes](/docs/reference/utility-classes).
-
 
   <b-card class="bd-example">
     <b-list-group>
@@ -503,7 +476,6 @@ help of [flexbox utility classes](/docs/reference/utility-classes).
       </b-list-group-item>
     </b-list-group>  
   </b-card>
-
 
 ```html
 <b-list-group>
@@ -548,9 +520,7 @@ help of [flexbox utility classes](/docs/reference/utility-classes).
 </b-list-group>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <style lang="scss" scoped>
     .bd-example > .card-body > .list-group {

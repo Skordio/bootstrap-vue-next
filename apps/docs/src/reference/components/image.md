@@ -23,11 +23,9 @@ Images in BootstrapVueNext can be made responsive with the `fluid` prop (which s
 `max-width: 100%; height: auto;` via CSS classes) so that it scales with the parent element - up to
 the maximum native width of the image.
 
-
   <b-card>
     <b-img src="https://picsum.photos/1024/400/?image=41" fluid alt="Responsive image"></b-img>
   </b-card>
-
 
 ```html
 <b-card>
@@ -38,14 +36,12 @@ the maximum native width of the image.
 To make a fluid image that will grow to fill the width of its container, use the `fluid-grow` prop.
 Note this may cause blurring on small bitmap images.
 
-
   <b-card>
     <h5>Small image with <code>fluid</code>:</h5>
     <b-img src="https://picsum.photos/300/150/?image=41" fluid alt="Fluid image"></b-img>
     <h5 class="my-3">Small image with <code>fluid-grow</code>:</h5>
     <b-img src="https://picsum.photos/300/150/?image=41" fluid-grow alt="Fluid-grow image"></b-img>
   </b-card>
-
 
 ```html
 <b-card>
@@ -63,7 +59,6 @@ default of inline-block element.
 
 You can use prop `thumbnail` to give an image a rounded light border appearance.
 
-
   <b-card class="bg-dark">
     <b-row>
       <b-col>
@@ -77,7 +72,6 @@ You can use prop `thumbnail` to give an image a rounded light border appearance.
       </b-col>
     </b-row>
   </b-card>
-
 
 ```html
 <b-card class="bg-dark">
@@ -109,7 +103,6 @@ values:
 - `'circle'`: make a circle (if square image) or oval (if not square) border
 - `'0'`: explicitly turn off rounding of corners
 
-
   <b-card>
     <div class="d-flex" style="column-gap: 1%;">
       <b-img v-bind="mainProps" rounded alt="Rounded image"></b-img>
@@ -121,7 +114,6 @@ values:
       <b-img v-bind="mainProps" rounded="0" alt="Not rounded image"></b-img>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -151,14 +143,12 @@ left+right margins). You can also center images by placing them in a container t
 
 **Left and right aligned (float):**
 
-
   <b-card>
     <div class="clearfix">
       <b-img left src="https://picsum.photos/125/125/?image=58" alt="Left image"></b-img>
       <b-img right src="https://picsum.photos/125/125/?image=58" alt="Right image"></b-img>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -171,11 +161,9 @@ left+right margins). You can also center images by placing them in a container t
 
 **Center aligned (block):**
 
-
   <b-card>
     <b-img center src="https://picsum.photos/125/125/?image=58" alt="Center image"></b-img>
   </b-card>
-
 
 ```html
 <div>
@@ -202,7 +190,6 @@ color value:
 
 The default `blank-color` is `transparent`.
 
-
   <b-card>
     <div class="d-flex" style="column-gap: 1%;">
       <b-img v-bind="propsTr" alt="Transparent image"></b-img>
@@ -214,7 +201,6 @@ The default `blank-color` is `transparent`.
       <b-img v-bind="propsTr" blank-color="#88f" alt="HEX shorthand color (#88f)"></b-img>
     </div>
   </b-card>
-
 
 ```html
 <template>
@@ -274,9 +260,7 @@ guide.
 
 Lazy loaded images are actived through the `lazy` prop. Eventually, the component will be expanded to include placeholder slots, but are not available at this time.
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script lang="ts" setup>
   import {ref, computed} from 'vue'

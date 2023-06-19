@@ -3,7 +3,6 @@
 > Easily extend form controls by adding text, buttons, or button groups on either side of textual
 > inputs.
 
-
   <b-card>
     <div>
       <!-- Using props -->
@@ -27,7 +26,6 @@
       </b-input-group>
     </div>  
   </b-card>
-
 
 ```html
 <div>
@@ -63,7 +61,6 @@ You can attach addons using either props, named slots and/or sub-components.
 
 Values will be internally wrapped by a `<b-input-group-text>` to display correctly.
 
-
   <b-card>
     <div>
       <b-input-group prepend="$" append=".00">
@@ -74,7 +71,6 @@ Values will be internally wrapped by a `<b-input-group-text>` to display correct
       </b-input-group>
     </div>  
   </b-card>
-
 
 ```html
 <div>
@@ -94,7 +90,6 @@ if you want better control over addons, you can use `prepend` and `append` slots
 The slot content will automatically be wrapped by
 [`<b-input-group-prepend>` or `<b-input-group-append>`](#using-sub-components) to display correctly.
 
-
   <b-card>
     <div>
       <b-input-group>
@@ -111,7 +106,6 @@ The slot content will automatically be wrapped by
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <b-card>
@@ -138,7 +132,6 @@ Use the `<b-input-group-prepend>` or `<b-input-group-append>` to add arbitrary a
 like, and use these components to group buttons in your input group. Single buttons must always be
 wrapped in these components for proper styling.
 
-
   <b-card>
     <div>
       <b-input-group>
@@ -156,7 +149,6 @@ wrapped in these components for proper styling.
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -212,7 +204,6 @@ classes applied.
 
 ### Native checkbox and radio addons
 
-
   <b-card>
     <div>
       <b-input-group class="mb-2">
@@ -229,7 +220,6 @@ classes applied.
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -253,7 +243,6 @@ classes applied.
 Using `<b-form-checkbox>` and `<b-form-radio>` components as addons, using Bootstrap
 [utility classes](/docs/reference/utility-classes) for additional styling to get them to "fit" in
 the addon:
-
 
   <b-card>
     <div>
@@ -283,7 +272,6 @@ the addon:
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -321,7 +309,6 @@ the control and the hidden label.
 
 ## Multiple inputs
 
-
   <b-card>
     <div>
       <b-input-group prepend="First and last name" class="mb-2">
@@ -330,7 +317,6 @@ the control and the hidden label.
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -345,7 +331,6 @@ the control and the hidden label.
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
 
-
   <b-card>
     <div>
       <b-input-group prepend="Item">
@@ -357,7 +342,6 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -372,7 +356,6 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 ```
 
 ## Dropdown addons
-
 
   <b-card>
     <div>
@@ -393,7 +376,6 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -421,7 +403,6 @@ Set height using the `size` prop to `sm` or `lg` for small or large respectively
 to set size on the individual inputs or buttons. Note however, you _will be required_ to also set
 the size on dropdowns.
 
-
   <b-card>
     <div>
       <b-input-group
@@ -438,7 +419,6 @@ the size on dropdowns.
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -464,7 +444,6 @@ To control width, place the input inside standard Bootstrap grid column.
 If using `<b-form-radio>` or `<b-form-checkbox>` as addons, additional utility classes may be
 required to make everything fit correctly, depending on the size chosen:
 
-
   <b-card>
     <div>
       <b-input-group size="sm" prepend="Small" class="mb-2">
@@ -485,7 +464,6 @@ required to make everything fit correctly, depending on the size chosen:
       </b-input-group>
     </div>
   </b-card>
-
 
 ```html
 <div>
@@ -516,6 +494,4 @@ margin, via the use of the `.mb-n1` [utility class](/docs/reference/utility-clas
 Bootstrap v5 currently **does not** support contextual state styling (i.e. valid or invalid) of
 input groups. However, the inputs inside the input group do support contextual state.
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

@@ -62,9 +62,9 @@ Dropsdowns can be added like so
 </b-nav>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const dropdownShow = ref(false)
+  const dropdownShow = ref(false)
 </script>
 ```
 
@@ -86,7 +86,7 @@ You can make nav item styles in various ways
 </b-card>
 
 ```html
- <b-nav tabs>
+<b-nav tabs>
   <b-nav-item active>Active</b-nav-item>
   <b-nav-item>Link</b-nav-item>
   <b-nav-item>Another Link</b-nav-item>
@@ -147,16 +147,14 @@ Use the `<b-nav-text>` child component to place plain text content into the nav:
 </b-card>
 
 ```html
-  <b-nav >
-    <b-nav-item href="#1">Link 1</b-nav-item>
-    <b-nav-item href="#2">Link 2</b-nav-item>
-    <b-nav-text>Plain text</b-nav-text>
-  </b-nav>
+<b-nav>
+  <b-nav-item href="#1">Link 1</b-nav-item>
+  <b-nav-item href="#2">Link 2</b-nav-item>
+  <b-nav-text>Plain text</b-nav-text>
+</b-nav>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script setup lang="ts">
 import {ref} from 'vue'

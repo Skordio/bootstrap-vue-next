@@ -1,5 +1,3 @@
 # Navbar
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>

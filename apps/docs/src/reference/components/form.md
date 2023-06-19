@@ -66,8 +66,7 @@ supported components, form layout, and more.
   </div>
 </b-card>
 
-
-```html
+```vue-html
 <template>
   <b-card>
     <div>
@@ -116,7 +115,7 @@ supported components, form layout, and more.
   </b-card>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
   import {ref, computed, reactive, nextTick} from 'vue'
 
   const form = reactive({
@@ -161,7 +160,6 @@ You may need to manually address the width and alignment of individual form cont
 include a `<label>` with each form control, even if you need to hide it from non-screenreader
 visitors with class `.visually-hidden`.
 
-
 <b-card>
   <div>
     <b-form>
@@ -193,8 +191,7 @@ visitors with class `.visually-hidden`.
   </div>
 </b-card>
 
-
-```html
+```vue-html
 <b-card>
   <div>
     <b-form>
@@ -229,7 +226,6 @@ visitors with class `.visually-hidden`.
 
 Custom form controls and selects are also supported.
 
-
 <b-card>
   <div>
     <b-form>
@@ -256,8 +252,7 @@ Custom form controls and selects are also supported.
   </div>
 </b-card>
 
-
-```html
+```vue-html
 <b-card>
   <div>
     <b-form>
@@ -334,7 +329,6 @@ displayed with a muted color and slightly smaller font-size.
 `aria-describedby` attribute. This will ensure that assistive technologies, such as screen readers,
 will announce this help text when the user focuses or enters the control.
 
-
 <b-card>
   <div>
     <b-form @submit.stop.prevent>
@@ -352,8 +346,7 @@ will announce this help text when the user focuses or enters the control.
   </div>
 </b-card>
 
-
-```html
+```vue-html
 <b-card>
   <div>
     <b-form @submit.stop.prevent>
@@ -395,7 +388,6 @@ text from automatically showing (as the feedback component is not a direct sibli
 control's input). Use the feedback component's `state` prop (bound to the state of the form control)
 or the `force-show` prop to display the feedback.
 
-
 <b-card>
   <div>
     <b-form  @submit.stop.prevent>
@@ -411,8 +403,7 @@ or the `force-show` prop to display the feedback.
   </div>
 </b-card>
 
-
-```html
+```vue-html
 <template>
   <b-card>
     <div>
@@ -428,7 +419,7 @@ or the `force-show` prop to display the feedback.
   </b-card>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
   import {ref, computed} from 'vue'
 
   const userId = ref('')
@@ -456,42 +447,56 @@ Refer to the
 [Bootstrap v5 Form Validation Documentation](https://getbootstrap.com/docs/5.0/forms/validation/)
 for details on the Bootstrap v5 validation states.
 
+<ComponentReference :data="data"></ComponentReference>
 
-  <ComponentReference></ComponentReference>
+<script setup lang="ts">
+import {data} from '../../data/components/form.data'
+import ComponentReference from '../../components/ComponentReference.vue'
+import {
+  BFormValidFeedback,
+  BFormInvalidFeedback,
+  BFormText,
+  BInputGroup,
+  BCard,
+  BButton,
+  BForm,
+  BFormCheckboxGroup,
+  BFormCheckbox,
+  BFormGroup,
+  BFormInput,
+  BFormSelect
+} from 'bootstrap-vue-next'
+import {ref, computed, reactive, nextTick} from 'vue'
 
+const form = reactive({
+  email: '',
+  name: '',
+  food: null,
+  checked: []
+})
 
-<script lang='ts' setup>
-  import {ref, computed, reactive, nextTick} from 'vue'
+const foods = [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn']
+const show = ref(true)
 
-  const form = reactive({
-    email: '',
-    name: '',
-    food: null,
-    checked: []
+const onSubmit = (event) => {
+  event.preventDefault()
+  alert(JSON.stringify(form))
+}
+
+const onReset = (event) => {
+  event.preventDefault()
+  // Reset our form values
+  form.email = ''
+  form.name = ''
+  form.food = null
+  form.checked = []
+  // Trick to reset/clear native browser form validation state
+  show.value = false
+  nextTick(() => {
+    show.value = true
   })
+}
 
-  const foods = [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn']
-  const show = ref(true)
-
-  const onSubmit = (event) => {
-    event.preventDefault()
-    alert(JSON.stringify(form))
-  }
-
-  const onReset = (event) => {
-    event.preventDefault()
-    // Reset our form values
-    form.email = ''
-    form.name = ''
-    form.food = null
-    form.checked = []
-    // Trick to reset/clear native browser form validation state
-    show.value = false
-    nextTick(() => {
-      show.value = true
-    })
-  }
-
-  const userId = ref('')
-  const validation = computed(()=> userId.value.length > 4 && userId.value.length < 13)
+const userId = ref('')
+const validation = computed(()=> userId.value.length > 4 && userId.value.length < 13)
 </script>

@@ -3,7 +3,7 @@
 ## Usage
 
 <b-button @click="modal = !modal">
-  Toggle modal
+Toggle modal
 </b-button>
 
 <b-modal v-model="modal" title="Hello, World!">
@@ -11,18 +11,14 @@
 </b-modal>
 
 ```html
-<b-button @click="modal = !modal">
-  Toggle modal
-</b-button>
+<b-button @click="modal = !modal"> Toggle modal </b-button>
 
-<b-modal v-model="modal">
-  Foo bar
-</b-modal>
+<b-modal v-model="modal"> Foo bar </b-modal>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const modal = ref(false)
+  const modal = ref(false)
 </script>
 ```
 
@@ -35,18 +31,16 @@ At this time, there is no built in functionality for toggling a modal in a globa
 It is possible to prevent showing/closing modals. You can prevent hiding on the following Events: ok, cancel, close, and hide
 
 <b-button @click="preventableModal = !preventableModal">
-  Toggle modal
+Toggle modal
 </b-button>
 
 <b-modal v-model="preventableModal" title="Hello, World!" @hide.prevent>
-  Foobar?
-  <b-button @click="preventableModal = false">Force leave</b-button>
+Foobar?
+<b-button @click="preventableModal = false">Force leave</b-button>
 </b-modal>
 
 ```html
-<b-button @click="preventableModal = !preventableModal">
-  Toggle modal
-</b-button>
+<b-button @click="preventableModal = !preventableModal"> Toggle modal </b-button>
 
 <b-modal v-model="preventableModal" title="Hello, World!" @hide.prevent>
   Foobar?
@@ -54,9 +48,9 @@ It is possible to prevent showing/closing modals. You can prevent hiding on the 
 </b-modal>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const preventableModal = ref(false)
+  const preventableModal = ref(false)
 </script>
 ```
 
@@ -96,17 +90,15 @@ const preventableModal = ref(false)
 </b-modal>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+  import {ref} from 'vue'
 
-const nestedModal1 = ref(false)
-const nestedModal2 = ref(false)
-const nestedModal3 = ref(false)
+  const nestedModal1 = ref(false)
+  const nestedModal2 = ref(false)
+  const nestedModal3 = ref(false)
 </script>
 ```
 
-
-  <ComponentReference></ComponentReference>
-
+<ComponentReference></ComponentReference>
 
 <script setup lang="ts">
 import {ref} from 'vue'
